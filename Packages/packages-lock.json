@@ -1,16 +1,5 @@
 {
   "dependencies": {
-    "com.google.xr.cardboard": {
-      "version": "https://github.com/googlevr/cardboard-xr-plugin.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.inputsystem": "1.7.0",
-        "com.unity.xr.management": "3.2.9",
-        "com.unity.xr.legacyinputhelpers": "2.1.4"
-      },
-      "hash": "e6bffbb2d3a652e6c052d93cc4b3f29817d6949a"
-    },
     "com.unity.burst": {
       "version": "1.8.25",
       "depth": 2,
@@ -290,6 +279,17 @@
         "com.unity.xr.legacyinputhelpers": "2.1.11"
       },
       "url": "https://packages.unity.com"
+    },
+    "com.vrsystems.cardboard-calibration": {
+      "version": "https://github.com/epyyny/Cardboard-Calibration-Tool.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.inputsystem": "1.7.0",
+        "com.unity.xr.management": "3.2.9",
+        "com.unity.xr.legacyinputhelpers": "2.1.4"
+      },
+      "hash": "e2f0fb3e8b856bb3630f429424a0b5a30110b27e"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
