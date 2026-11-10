@@ -18,6 +18,9 @@ public class Throwable : Interactive
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        CameraInteract cameraInteractor = FindObjectOfType<CameraInteract>();
+        if (cameraInteractor != null)
+            cam = cameraInteractor.transform;
     }
 
     public new void Interact()
@@ -45,8 +48,12 @@ public class Throwable : Interactive
 
     void Update()
     {
-        if (!cam && Camera.main)
-            cam = Camera.main.transform;
+        if (cam == null)
+        {
+            CameraInteract cameraInteractor = FindObjectOfType<CameraInteract>();
+            if (cameraInteractor != null)
+                cam = cameraInteractor.transform;
+        }
 
         rb.useGravity = (grabbed != transform) && useGravity;
 
@@ -59,3 +66,4 @@ public class Throwable : Interactive
         }
     }
 }
+

@@ -31,6 +31,10 @@ public class Grabbable : Interactive
         rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
 
+        CameraInteract cameraInteractor = FindObjectOfType<CameraInteract>();
+        if (cameraInteractor != null)
+            cam = cameraInteractor.transform;
+
         ballLayer = LayerMask.NameToLayer("Ball");
         defaultLayer = LayerMask.NameToLayer("Default");
     }
@@ -85,8 +89,12 @@ public class Grabbable : Interactive
 
     void Update()
     {
-        if (!cam && Camera.main)
-            cam = Camera.main.transform;
+        if (cam == null)
+        {
+            CameraInteract cameraInteractor = FindObjectOfType<CameraInteract>();
+            if (cameraInteractor != null)
+                cam = cameraInteractor.transform;
+        }
 
         if (isGrabbed)
         {
@@ -145,3 +153,4 @@ public class Grabbable : Interactive
             gameObject.layer = ballLayer;
     }
 }
+
