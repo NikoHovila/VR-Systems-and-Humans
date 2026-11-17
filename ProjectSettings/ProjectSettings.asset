@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: UniOulu
-  productName: Puzzle Jungle New
+  companyName: Kaksiot Oulu 37+ m2
+  productName: Storybook VR
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -297,7 +297,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 4bbbf15149ef18143be31b89e5564714, type: 3}
+      m_Icon: {fileID: 2800000, guid: fe1993450faed544bbd30d976f0341b9, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
