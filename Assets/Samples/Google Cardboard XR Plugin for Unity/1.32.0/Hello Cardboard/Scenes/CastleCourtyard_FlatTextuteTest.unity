@@ -384,10 +384,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6836549964862787309, guid: e8517c4336bb09c47897ecc31c6268af, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 991556aba09d7ff48acc66c40e9ec821, type: 2}
     - target: {fileID: -6689036041284674117, guid: e8517c4336bb09c47897ecc31c6268af, type: 3}
       propertyPath: m_Name
       value: castle_courtyard_snow_whites_wishing_well
       objectReference: {fileID: 0}
+    - target: {fileID: -3050357849850861307, guid: e8517c4336bb09c47897ecc31c6268af, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 991556aba09d7ff48acc66c40e9ec821, type: 2}
     - target: {fileID: 1230940070388021993, guid: e8517c4336bb09c47897ecc31c6268af, type: 3}
       propertyPath: m_LocalPosition.y
       value: -3288
@@ -396,6 +404,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1763637079543395878, guid: e8517c4336bb09c47897ecc31c6268af, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 991556aba09d7ff48acc66c40e9ec821, type: 2}
+    - target: {fileID: 2250671389130370857, guid: e8517c4336bb09c47897ecc31c6268af, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 991556aba09d7ff48acc66c40e9ec821, type: 2}
     - target: {fileID: 2774220344278030320, guid: e8517c4336bb09c47897ecc31c6268af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.48
