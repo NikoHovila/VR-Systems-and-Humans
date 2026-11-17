@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/NikonScene.unity
     guid: fc61118d2c36ce54fa97e2db59276232
   - enabled: 0
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/UrsulanScene.unity
+    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/CottageOutside.unity
     guid: 22dd51bf181f28e49980cc42c687d1ed
   - enabled: 0
     path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/FinalScene.unity
