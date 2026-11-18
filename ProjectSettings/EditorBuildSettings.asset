@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Packages/com.vrsystems.cardboard-calibration/Runtime/Ruler/Ruler_Scene_ydpi.unity
     guid: 30d963e1496906d4ca8e63ee73bd4b2e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/CastleCourtyard.unity
     guid: b5981dbbaa346bc4ca95ff76c557374a
   - enabled: 0
@@ -29,6 +29,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/CastleCourtyard_FlatTextuteTest.unity
     guid: c2351abc626dc0e49b2863a5b3b594cf
+  - enabled: 1
+    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/MagicMirrorScene.unity
+    guid: 3641ed22c251f664b833953b19462ed4
+  - enabled: 1
+    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/FlowerForest.unity
+    guid: 1b65d782209bff344b0c88a75ea4ea69
+  - enabled: 0
+    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/Mine.unity
+    guid: 957cf7bab22642b43bebd4810e3d00dc
+  - enabled: 0
+    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/UnderneathTheCastle.unity
+    guid: 06297c280b23d584499b8770f210757e
+  - enabled: 0
+    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/ScaryForest.unity
+    guid: 4cf7b81301231894f8eca417bd675435
+  - enabled: 0
+    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/DwarfCottage.unity
+    guid: 6d4734708747a5c478ef81709bdc25ed
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ea038ade32a58e342b1bd92ac25e0560, type: 2}

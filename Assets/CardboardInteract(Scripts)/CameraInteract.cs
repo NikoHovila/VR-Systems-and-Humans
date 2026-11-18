@@ -55,7 +55,9 @@ public class CameraInteract : MonoBehaviour
     }
     void Update()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out hit, maxInteractDistance, interactLayer) && hit.transform.GetComponent<Interactive>())
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxInteractDistance, interactLayer) &&
+            hit.transform.GetComponent<Interactive>() != null &&
+            hit.transform.GetComponent<Interactive>().IsInteractable)
         {
             if (!selected || hit.transform.gameObject != selected.gameObject)
             {
@@ -85,7 +87,7 @@ public class CameraInteract : MonoBehaviour
         {
             if(Time.time-timer > dwellTimer && timer > 0)
             {
-                selected.SendMessage("Interact");
+                InteractSelected();
                 timer = 0;
             }
             dwellCircle.GetComponent<Renderer>().sharedMaterial.SetFloat("_Cutoff", Mathf.Clamp(1.3f - (Time.time - timer) / dwellTimer * 1.3f, 0.0f, 1.0f));
@@ -121,12 +123,22 @@ public class CameraInteract : MonoBehaviour
             twistCrosshair.transform.GetChild(0).localRotation = Quaternion.Euler(crosshairEuler);
             if ((angdiff <= -45f || angdiff >= 45f) && rollReset && selected)
             {
-                selected.SendMessage("Interact");
+                InteractSelected();
                 timer = 0;
                 rollReset = false;
             }
             if (angdiff > -30f && angdiff < 30f)
                 rollReset = true;
         }
+    }
+
+    private void InteractSelected()
+    {
+        Interactive item = selected;
+        if (item == null || !item.IsInteractable)
+            return;
+
+        item.NotifyInteracted();
+        item.SendMessage("Interact");
     }
 }

@@ -4,27 +4,20 @@
 // Aseta Inspectorissa:
 //   - Difficulty       → Easy / Medium / Hard
 //   - Scene To Load    → Pelin scenen nimi (string)
-//   - Door Controller  → Viittaus DoorController-komponenttiin (valinnainen lukitus)
 //
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using UnitySceneManager = UnityEngine.SceneManagement.SceneManager;
+
 public class DifficultyDoor : Interactive
 {
     [SerializeField] private Difficulty difficulty;
     [SerializeField] private string sceneToLoad;
-    [SerializeField] private DoorController doorController; // Valinnainen — jätä tyhjäksi jos ovi ei ole lukossa
 
     public new void Interact()
     {
-        // Tarkista lukko, jos DoorController on asetettu
-        if (doorController != null && !doorController.CanTeleport())
-        {
-            Debug.Log("Ovi on lukossa!");
-            return;
-        }
-
         // Tallenna vaikeustaso ennen scenen vaihtoa
         if (DifficultyManager.Instance != null)
         {
@@ -38,7 +31,7 @@ public class DifficultyDoor : Interactive
         // Vaihda sceneen
         if (!string.IsNullOrEmpty(sceneToLoad))
         {
-            SceneManager.LoadScene(sceneToLoad);
+            UnitySceneManager.LoadScene(sceneToLoad);
         }
         else
         {

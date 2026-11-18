@@ -5,6 +5,8 @@ using TMPro;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
+using UnitySceneManager = UnityEngine.SceneManagement.SceneManager;
+
 public class BasketWeightChecker : MonoBehaviour
 {
     private static int pendingRoundsCompleted = -1;
@@ -72,8 +74,8 @@ public class BasketWeightChecker : MonoBehaviour
         BasketWeightChecker checker = FindObjectOfType<BasketWeightChecker>();
         pendingRoundsCompleted = checker != null ? checker.roundsCompleted : 0;
 
-        Scene activeScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(activeScene.buildIndex);
+        Scene activeScene = UnitySceneManager.GetActiveScene();
+        UnitySceneManager.LoadScene(activeScene.buildIndex);
     }
 
     void LogCurrentDifficulty()

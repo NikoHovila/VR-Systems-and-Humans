@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using UnitySceneManager = UnityEngine.SceneManagement.SceneManager;
+
 public static class LanguageManager
 {
     public static string CurrentLanguage { get; private set; }
@@ -10,7 +12,7 @@ public static class LanguageManager
     static void Init()
     {
         CurrentLanguage = PlayerPrefs.GetString("language", "FI");
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        UnitySceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
