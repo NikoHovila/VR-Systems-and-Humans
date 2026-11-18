@@ -716,18 +716,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3385520e7908534c90ee5ae24ea5ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneManager
-  firstVisitHideObjects:
-  - {fileID: 2031132953}
-  - {fileID: 473678880}
-  secondVisitHideObjects:
-  - {fileID: 473678880}
-  - {fileID: 1789463459}
-  thirdVisitHideObjects:
-  - {fileID: 1789463459}
-  - {fileID: 1399228466}
-  fourthVisitHideObjects:
-  - {fileID: 1399228466}
-  - {fileID: 294553606}
+  firstVisitHideObjects: []
+  secondVisitHideObjects: []
+  thirdVisitHideObjects: []
+  fourthVisitHideObjects: []
   narratorAudio1: {fileID: 8300000, guid: 175c7b7664bc5b14b8f78713234a6c28, type: 3}
   narratorAudio2: {fileID: 0}
   narratorAudio3: {fileID: 0}
@@ -735,16 +727,14 @@ MonoBehaviour:
   - {fileID: 1867724512}
   itemList2: []
   itemList3: []
-  nextScene: CastleCourtyard_FlatTextuteTest
-  secondVisitNarratorAudio1: {fileID: 8300000, guid: 7a6232206642e3440ada3dae6bc546cc, type: 3}
+  nextScene: CottageOutside
+  secondVisitNarratorAudio1: {fileID: 0}
   secondVisitNarratorAudio2: {fileID: 0}
   secondVisitNarratorAudio3: {fileID: 0}
-  secondVisitItemList1:
-  - {fileID: 1399228466}
-  - {fileID: 294553606}
+  secondVisitItemList1: []
   secondVisitItemList2: []
   secondVisitItemList3: []
-  secondVisitNextScene: MagicMirrorScene
+  secondVisitNextScene: 
   thirdVisitNarratorAudio1: {fileID: 0}
   thirdVisitNarratorAudio2: {fileID: 0}
   thirdVisitNarratorAudio3: {fileID: 0}

@@ -31,6 +31,13 @@ public class DifficultyDoor : Interactive
         // Vaihda sceneen
         if (!string.IsNullOrEmpty(sceneToLoad))
         {
+            if (!Application.CanStreamedLevelBeLoaded(sceneToLoad))
+            {
+                Debug.LogError($"DifficultyDoor: Scene '{sceneToLoad}' could not be loaded.", this);
+                return;
+            }
+
+            global::SceneManager.ResetVisitCountsForNewGame();
             UnitySceneManager.LoadScene(sceneToLoad);
         }
         else

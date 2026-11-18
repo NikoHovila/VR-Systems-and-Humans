@@ -659,18 +659,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3385520e7908534c90ee5ae24ea5ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneManager
-  firstVisitHideObjects:
-  - {fileID: 2031132953}
-  - {fileID: 473678880}
-  secondVisitHideObjects:
-  - {fileID: 473678880}
-  - {fileID: 1789463459}
-  thirdVisitHideObjects:
-  - {fileID: 1789463459}
-  - {fileID: 1399228466}
-  fourthVisitHideObjects:
-  - {fileID: 1399228466}
-  - {fileID: 294553606}
+  firstVisitHideObjects: []
+  secondVisitHideObjects: []
+  thirdVisitHideObjects: []
+  fourthVisitHideObjects: []
   narratorAudio1: {fileID: 8300000, guid: 175c7b7664bc5b14b8f78713234a6c28, type: 3}
   narratorAudio2: {fileID: 0}
   narratorAudio3: {fileID: 0}
@@ -678,30 +670,31 @@ MonoBehaviour:
   - {fileID: 1867724512}
   itemList2: []
   itemList3: []
-  nextScene: CastleCourtyard_FlatTextuteTest
-  secondVisitNarratorAudio1: {fileID: 8300000, guid: 7a6232206642e3440ada3dae6bc546cc, type: 3}
+  nextScene: CottageSecondFloor
+  secondVisitNarratorAudio1: {fileID: 8300000, guid: 7d50cbfdee9d01c4f941c05dbdcfce6a, type: 3}
   secondVisitNarratorAudio2: {fileID: 0}
   secondVisitNarratorAudio3: {fileID: 0}
   secondVisitItemList1:
-  - {fileID: 1399228466}
-  - {fileID: 294553606}
+  - {fileID: 1867724512}
   secondVisitItemList2: []
   secondVisitItemList3: []
-  secondVisitNextScene: MagicMirrorScene
-  thirdVisitNarratorAudio1: {fileID: 0}
+  secondVisitNextScene: CottageSecondFloor
+  thirdVisitNarratorAudio1: {fileID: 8300000, guid: 7a6232206642e3440ada3dae6bc546cc, type: 3}
   thirdVisitNarratorAudio2: {fileID: 0}
   thirdVisitNarratorAudio3: {fileID: 0}
-  thirdVisitItemList1: []
+  thirdVisitItemList1:
+  - {fileID: 1867724512}
   thirdVisitItemList2: []
   thirdVisitItemList3: []
-  thirdVisitNextScene: 
-  fourthVisitNarratorAudio1: {fileID: 0}
+  thirdVisitNextScene: CottageOutside
+  fourthVisitNarratorAudio1: {fileID: 8300000, guid: 175c7b7664bc5b14b8f78713234a6c28, type: 3}
   fourthVisitNarratorAudio2: {fileID: 0}
   fourthVisitNarratorAudio3: {fileID: 0}
-  fourthVisitItemList1: []
+  fourthVisitItemList1:
+  - {fileID: 1867724512}
   fourthVisitItemList2: []
   fourthVisitItemList3: []
-  fourthVisitNextScene: 
+  fourthVisitNextScene: FlowerForest
 --- !u!4 &516985107
 Transform:
   m_ObjectHideFlags: 0

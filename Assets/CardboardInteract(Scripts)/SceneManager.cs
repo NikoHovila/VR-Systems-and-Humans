@@ -1,3 +1,4 @@
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class SceneManager : MonoBehaviour
     private const string VisitCountPrefix = "SceneVisitCountByPath_v2_";
     private const string SceneNameSuffix = "_SceneName";
     private const string ScenePathSuffix = "_ScenePath";
+    private const string VisitCountRegistryKey = "SceneVisitCountByPath_v2_Registry";
+    private const string LegacyVisitCountPrefix = "SceneVisitCount_";
 
     [Header("Objects hidden by visit")]
     public List<GameObject> firstVisitHideObjects = new List<GameObject>();
@@ -78,6 +81,44 @@ public class SceneManager : MonoBehaviour
 
     public int CurrentVisitNumber { get; private set; }
 
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void ClearVisitCountsAtApplicationStart()
+    {
+        ResetVisitCountsForNewGame();
+    }
+
+    public static void ResetVisitCountsForNewGame()
+    {
+        HashSet<string> visitCountKeys = new HashSet<string>();
+        string registeredKeys = PlayerPrefs.GetString(VisitCountRegistryKey, string.Empty);
+
+        foreach (string key in registeredKeys.Split('\n'))
+        {
+            if (!string.IsNullOrEmpty(key))
+                visitCountKeys.Add(key);
+        }
+
+        for (int buildIndex = 0; buildIndex < UnitySceneManager.sceneCountInBuildSettings; buildIndex++)
+        {
+            string scenePath = SceneUtility.GetScenePathByBuildIndex(buildIndex);
+            if (string.IsNullOrEmpty(scenePath))
+                continue;
+
+            visitCountKeys.Add(VisitCountPrefix + scenePath);
+            visitCountKeys.Add(LegacyVisitCountPrefix + Path.GetFileNameWithoutExtension(scenePath));
+        }
+
+        foreach (string key in visitCountKeys)
+        {
+            PlayerPrefs.DeleteKey(key);
+            PlayerPrefs.DeleteKey(key + SceneNameSuffix);
+            PlayerPrefs.DeleteKey(key + ScenePathSuffix);
+        }
+
+        PlayerPrefs.DeleteKey(VisitCountRegistryKey);
+        PlayerPrefs.Save();
+    }
+
     private void Awake()
     {
         narrationSource = GetComponent<AudioSource>();
@@ -120,8 +161,24 @@ public class SceneManager : MonoBehaviour
         PlayerPrefs.SetInt(visitCountKey, visitCount);
         PlayerPrefs.SetString(visitCountKey + SceneNameSuffix, scene.name);
         PlayerPrefs.SetString(visitCountKey + ScenePathSuffix, scene.path);
+        RegisterVisitCountKey(visitCountKey);
         PlayerPrefs.Save();
         return visitCount;
+    }
+
+    private static void RegisterVisitCountKey(string visitCountKey)
+    {
+        string registeredKeys = PlayerPrefs.GetString(VisitCountRegistryKey, string.Empty);
+        foreach (string key in registeredKeys.Split('\n'))
+        {
+            if (key == visitCountKey)
+                return;
+        }
+
+        string updatedKeys = string.IsNullOrEmpty(registeredKeys)
+            ? visitCountKey
+            : registeredKeys + "\n" + visitCountKey;
+        PlayerPrefs.SetString(VisitCountRegistryKey, updatedKeys);
     }
 
     private static string GetVisitCountKey(Scene scene)
