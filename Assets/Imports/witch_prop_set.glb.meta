@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b0f607d70087d53448b3b343c99aa7a7
+guid: 2e305ba2663165a48b8f53cc176933a6
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -25,4 +25,10 @@ ScriptedImporter:
     lightIntensityFactor: 1
     sceneObjectCreation: 2
   assetDependencies: []
-  reportItems: []
+  reportItems:
+  - type: 2
+    code: 30
+    messages: []
+  - type: 2
+    code: 30
+    messages: []
