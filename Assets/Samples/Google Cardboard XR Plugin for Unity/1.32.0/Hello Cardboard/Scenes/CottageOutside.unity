@@ -249,6 +249,8 @@ MonoBehaviour:
   secondVisitHideObjects: []
   thirdVisitHideObjects: []
   fourthVisitHideObjects: []
+  fifthVisitHideObjects: []
+  sixthVisitHideObjects: []
   narratorAudio1: {fileID: 8300000, guid: 175c7b7664bc5b14b8f78713234a6c28, type: 3}
   narratorAudio2: {fileID: 0}
   narratorAudio3: {fileID: 0}
@@ -279,6 +281,20 @@ MonoBehaviour:
   fourthVisitItemList2: []
   fourthVisitItemList3: []
   fourthVisitNextScene: 
+  fifthVisitNarratorAudio1: {fileID: 0}
+  fifthVisitNarratorAudio2: {fileID: 0}
+  fifthVisitNarratorAudio3: {fileID: 0}
+  fifthVisitItemList1: []
+  fifthVisitItemList2: []
+  fifthVisitItemList3: []
+  fifthVisitNextScene: 
+  sixthVisitNarratorAudio1: {fileID: 0}
+  sixthVisitNarratorAudio2: {fileID: 0}
+  sixthVisitNarratorAudio3: {fileID: 0}
+  sixthVisitItemList1: []
+  sixthVisitItemList2: []
+  sixthVisitItemList3: []
+  sixthVisitNextScene: 
 --- !u!4 &516985107
 Transform:
   m_ObjectHideFlags: 0
@@ -378,7 +394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSurface
   interactModeOverride: 0
-  twistMultiplierOverride: 0
+  twistMultiplierOverride: 4
   dwellTimerOverride: 0
 --- !u!65 &611877897
 BoxCollider:
@@ -420,7 +436,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.75, y: 36, z: 0.17}
+  m_Size: {x: 5.75, y: 33.56, z: 0.17}
   m_Center: {x: -5.4, y: -23.2, z: -0.12}
 --- !u!1 &907292807
 GameObject:
@@ -447,7 +463,7 @@ Transform:
   m_GameObject: {fileID: 907292807}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 1.75, y: 1.6, z: 39.92}
+  m_LocalPosition: {x: 0.7, y: 1.6, z: 34.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -10346,6 +10346,8 @@ MonoBehaviour:
   - {fileID: 1485933236}
   - {fileID: 835730025}
   fourthVisitHideObjects: []
+  fifthVisitHideObjects: []
+  sixthVisitHideObjects: []
   narratorAudio1: {fileID: 8300000, guid: 175c7b7664bc5b14b8f78713234a6c28, type: 3}
   narratorAudio2: {fileID: 0}
   narratorAudio3: {fileID: 0}
@@ -10391,6 +10393,20 @@ MonoBehaviour:
   fourthVisitItemList2: []
   fourthVisitItemList3: []
   fourthVisitNextScene: 
+  fifthVisitNarratorAudio1: {fileID: 0}
+  fifthVisitNarratorAudio2: {fileID: 0}
+  fifthVisitNarratorAudio3: {fileID: 0}
+  fifthVisitItemList1: []
+  fifthVisitItemList2: []
+  fifthVisitItemList3: []
+  fifthVisitNextScene: 
+  sixthVisitNarratorAudio1: {fileID: 0}
+  sixthVisitNarratorAudio2: {fileID: 0}
+  sixthVisitNarratorAudio3: {fileID: 0}
+  sixthVisitItemList1: []
+  sixthVisitItemList2: []
+  sixthVisitItemList3: []
+  sixthVisitNextScene: 
 --- !u!4 &516985107
 Transform:
   m_ObjectHideFlags: 0
@@ -10903,7 +10919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportSurface
   interactModeOverride: 0
-  twistMultiplierOverride: 0
+  twistMultiplierOverride: 4
   dwellTimerOverride: 0
 --- !u!1 &533551372
 GameObject:
