@@ -227,8 +227,8 @@ GameObject:
   - component: {fileID: 396234904}
   - component: {fileID: 396234903}
   - component: {fileID: 396234902}
-  - component: {fileID: 396234901}
   - component: {fileID: 396234900}
+  - component: {fileID: 396234905}
   m_Layer: 0
   m_Name: Web4_Web4_0 (3)
   m_TagString: Untagged
@@ -255,23 +255,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2.0000005, z: 0.68}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &396234901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 396234899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5396477a5d43d548b895786b44d8863, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactive
-  interactModeOverride: 0
-  twistMultiplierOverride: 0
-  dwellTimerOverride: 0
+  m_Size: {x: 2, y: 2.0000005, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!23 &396234902
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -343,6 +328,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &396234905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396234899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUp
+  interactModeOverride: 0
+  twistMultiplierOverride: 0
+  dwellTimerOverride: 0
 --- !u!1 &516985105
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,7 +833,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.27, y: 1.44, z: 0.22}
+  m_Size: {x: 3.27, y: 1.44, z: 0.1}
   m_Center: {x: -0.95, y: 6.91, z: -0.004248047}
 --- !u!65 &681653928
 BoxCollider:
@@ -854,7 +854,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.57, y: 2.07, z: 0.22}
+  m_Size: {x: 3.57, y: 2.07, z: 0.1}
   m_Center: {x: -0.11, y: -2.22, z: -0.004248047}
 --- !u!65 &681653929
 BoxCollider:
@@ -875,7 +875,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.92, y: 3.17, z: 0.22}
+  m_Size: {x: 0.92, y: 3.17, z: 0.1}
   m_Center: {x: 0.79, y: 5.44, z: -0.004248047}
 --- !u!65 &681653930
 BoxCollider:
@@ -896,7 +896,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.74, y: 2.88, z: 0.22}
+  m_Size: {x: 3.74, y: 2.88, z: 0.1}
   m_Center: {x: -4.63, y: 5.33, z: -0.004248047}
 --- !u!65 &681653931
 BoxCollider:
@@ -917,7 +917,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6.43, y: 4.92, z: 0.22}
+  m_Size: {x: 6.43, y: 4.92, z: 0.1}
   m_Center: {x: -1.93, y: 1.3, z: -0.004248047}
 --- !u!1 &824513591
 GameObject:
@@ -1689,8 +1689,8 @@ GameObject:
   - component: {fileID: 1491076905}
   - component: {fileID: 1491076904}
   - component: {fileID: 1491076903}
-  - component: {fileID: 1491076902}
   - component: {fileID: 1491076901}
+  - component: {fileID: 1491076906}
   m_Layer: 0
   m_Name: Web4_Web4_0 (4)
   m_TagString: Untagged
@@ -1717,23 +1717,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2.0000005, z: 0.68}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1491076902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491076900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5396477a5d43d548b895786b44d8863, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactive
-  interactModeOverride: 0
-  twistMultiplierOverride: 0
-  dwellTimerOverride: 0
+  m_Size: {x: 2, y: 2.0000005, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!23 &1491076903
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1805,6 +1790,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1491076906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491076900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUp
+  interactModeOverride: 0
+  twistMultiplierOverride: 0
+  dwellTimerOverride: 0
 --- !u!1 &1754061852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,8 +1816,8 @@ GameObject:
   - component: {fileID: 1754061857}
   - component: {fileID: 1754061856}
   - component: {fileID: 1754061855}
-  - component: {fileID: 1754061854}
   - component: {fileID: 1754061853}
+  - component: {fileID: 1754061858}
   m_Layer: 0
   m_Name: Web4_Web4_0 (2)
   m_TagString: Untagged
@@ -1844,23 +1844,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2.0000005, z: 0.68}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1754061854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1754061852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5396477a5d43d548b895786b44d8863, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactive
-  interactModeOverride: 0
-  twistMultiplierOverride: 0
-  dwellTimerOverride: 0
+  m_Size: {x: 2, y: 2.0000005, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!23 &1754061855
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1932,6 +1917,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1754061858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754061852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUp
+  interactModeOverride: 0
+  twistMultiplierOverride: 0
+  dwellTimerOverride: 0
 --- !u!1 &1864502660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,8 +1943,8 @@ GameObject:
   - component: {fileID: 1864502665}
   - component: {fileID: 1864502664}
   - component: {fileID: 1864502663}
-  - component: {fileID: 1864502662}
   - component: {fileID: 1864502661}
+  - component: {fileID: 1864502666}
   m_Layer: 0
   m_Name: Web4_Web4_0 (1)
   m_TagString: Untagged
@@ -1971,23 +1971,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2.0000005, z: 0.68}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1864502662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1864502660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5396477a5d43d548b895786b44d8863, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactive
-  interactModeOverride: 0
-  twistMultiplierOverride: 0
-  dwellTimerOverride: 0
+  m_Size: {x: 2, y: 2.0000005, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!23 &1864502663
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2059,6 +2044,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1864502666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864502660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUp
+  interactModeOverride: 0
+  twistMultiplierOverride: 0
+  dwellTimerOverride: 0
 --- !u!1 &1867724512
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,8 +2481,8 @@ GameObject:
   - component: {fileID: 4838797717304126201}
   - component: {fileID: 8608655122532313937}
   - component: {fileID: 2455904014793843680}
-  - component: {fileID: 8608655122532313939}
   - component: {fileID: 8608655122532313938}
+  - component: {fileID: 8608655122532313939}
   m_Layer: 0
   m_Name: Web6_Web6_0
   m_TagString: Untagged
@@ -2549,8 +2549,8 @@ GameObject:
   - component: {fileID: 6392529400134254010}
   - component: {fileID: 5205078618851659638}
   - component: {fileID: 4920166554322067338}
-  - component: {fileID: 6392529400134254012}
   - component: {fileID: 6392529400134254011}
+  - component: {fileID: 6392529400134254012}
   m_Layer: 0
   m_Name: Web4_Web4_0
   m_TagString: Untagged
@@ -2632,8 +2632,8 @@ GameObject:
   - component: {fileID: 2395367014670544930}
   - component: {fileID: 194267219332652783}
   - component: {fileID: 1942713411578970191}
-  - component: {fileID: 3368818321536600134}
   - component: {fileID: 3368818321536600133}
+  - component: {fileID: 3368818321536600134}
   m_Layer: 0
   m_Name: Web5_Web5_0
   m_TagString: Untagged
@@ -2660,8 +2660,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.0000005, y: 2, z: 0.68}
-  m_Center: {x: 0, y: 0, z: -0.4024047}
+  m_Size: {x: 2.0000005, y: 2, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!114 &3368818321536600134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2671,9 +2671,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3368818321536600132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5396477a5d43d548b895786b44d8863, type: 3}
+  m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactive
+  m_EditorClassIdentifier: Assembly-CSharp::PickUp
   interactModeOverride: 0
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
@@ -2782,8 +2782,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2.0000005, z: 0.68}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 2.0000005, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!114 &6392529400134254012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2793,9 +2793,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2375328511961862986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5396477a5d43d548b895786b44d8863, type: 3}
+  m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactive
+  m_EditorClassIdentifier: Assembly-CSharp::PickUp
   interactModeOverride: 0
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
@@ -2826,8 +2826,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 0.68}
-  m_Center: {x: 0, y: 0, z: 0.31115952}
+  m_Size: {x: 2, y: 2, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!114 &8608655122532313939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2837,9 +2837,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 329784199029362394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5396477a5d43d548b895786b44d8863, type: 3}
+  m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactive
+  m_EditorClassIdentifier: Assembly-CSharp::PickUp
   interactModeOverride: 0
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
