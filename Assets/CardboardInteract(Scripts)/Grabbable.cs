@@ -43,13 +43,12 @@ public class Grabbable : Interactive
     {
         if (ballLayer != -1 && defaultLayer != -1)
         {
-            // Keep all Ball-layer objects from colliding with Default before grab.
             Physics.IgnoreLayerCollision(ballLayer, defaultLayer, true);
             gameObject.layer = ballLayer;
         }
 
         if (rb != null)
-            rb.useGravity = false; // optional: start without gravity
+            rb.useGravity = false;
     }
 
     public new void Interact()
@@ -58,32 +57,27 @@ public class Grabbable : Interactive
         {
             firstGrab = true;
 
-            // Switch to Default layer so physics collisions start working
             gameObject.layer = LayerMask.NameToLayer("Default");
 
-            // Enable gravity on first grab if needed
-            rb.useGravity = useGravity;
+            if (rb != null)
+                rb.useGravity = useGravity;
         }
 
         if (!isGrabbed && currentGrabbedItem != null && currentGrabbedItem != this)
             return;
 
-        // In fixed distance mode, prevent release via twist/dwell - only drop areas can release
         if (useFixedDistanceForFarObjects && isGrabbed)
             return;
 
-        // Toggle grab state
         isGrabbed = !isGrabbed;
         currentGrabbedItem = isGrabbed ? this : null;
 
         if (isGrabbed && cam != null)
         {
             float currentDistance = Vector3.Distance(cam.position, transform.position);
-
-            if (useFixedDistanceForFarObjects && currentDistance > fixedHoldDistance)
-                grabDistance = Mathf.Max(0.1f, fixedHoldDistance);
-            else
-                grabDistance = currentDistance;
+            grabDistance = useFixedDistanceForFarObjects && currentDistance > fixedHoldDistance
+                ? Mathf.Max(0.1f, fixedHoldDistance)
+                : currentDistance;
         }
     }
 
@@ -96,7 +90,7 @@ public class Grabbable : Interactive
                 cam = cameraInteractor.transform;
         }
 
-        if (isGrabbed)
+        if (isGrabbed && cam != null && rb != null)
         {
             Vector3 targetPoint = cam.position + cam.forward * grabDistance;
             rb.linearVelocity = (targetPoint - transform.position) * grabSpeed;
@@ -145,7 +139,6 @@ public class Grabbable : Interactive
             rb.angularVelocity = Vector3.zero;
         }
 
-        // Put it back on Ball layer and ignore collisions
         if (ballLayer == -1)
             ballLayer = LayerMask.NameToLayer("Ball");
 
@@ -153,4 +146,3 @@ public class Grabbable : Interactive
             gameObject.layer = ballLayer;
     }
 }
-

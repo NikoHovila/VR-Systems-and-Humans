@@ -36,6 +36,7 @@ public class TriggerInteract : MonoBehaviour
     // This prevents a single continuous press from triggering interactions in both global space and object space when the user's gaze moves.
     private bool pressBeganInGlobalSpace;
     private bool globalHoldProgressStarted;
+    private Interactive objectHoldTarget;
 
 
     void Start()
@@ -45,12 +46,13 @@ public class TriggerInteract : MonoBehaviour
         globalHoldTimer = minGlobalHoldTime;
 
         // Visuals
-        holdCircle.SetActive(false);
-        pressReticle.SetActive(false);
-        pressRing.SetActive(false);
-        pressRingOriginalScale = pressRing.transform.localScale;
+        SetActiveIfAssigned(holdCircle, false);
+        SetActiveIfAssigned(pressReticle, false);
+        SetActiveIfAssigned(pressRing, false);
+        if (pressRing != null)
+            pressRingOriginalScale = pressRing.transform.localScale;
 
-        globalTriggerHoldProgress.SetActive(false);
+        SetActiveIfAssigned(globalTriggerHoldProgress, false);
     }
 
     void Update()
@@ -60,21 +62,23 @@ public class TriggerInteract : MonoBehaviour
         
         // OBJECT INTERACT - Press
         // This is used for interacting with objects containing the "Interact" script, similar to Twist and Dwell
-        if(CameraInteract.selected && CameraInteract.selected.interactModeOverride == InteractMode.Press)
+        if (CameraInteract.selected && CameraInteract.GetSelectedInteractionMode() == InteractMode.Press)
         {
+            CancelObjectHoldWhilePressed();
+
             // Reset Global hold timer if gaze moved away from Global space
             globalHoldTimer = minGlobalHoldTime;
 
             // VISUALS
             // Turn off base
-            baseReticle.SetActive(false);
+            SetActiveIfAssigned(baseReticle, false);
             // Turn off hold visual
-            holdCircle.SetActive(false);
+            SetActiveIfAssigned(holdCircle, false);
             // Turn on press visual
-            pressReticle.SetActive(true);
-            pressRing.SetActive(true);
+            SetActiveIfAssigned(pressReticle, true);
+            SetActiveIfAssigned(pressRing, true);
             // Turn off hold visual
-            globalTriggerHoldProgress.SetActive(false);
+            SetActiveIfAssigned(globalTriggerHoldProgress, false);
 
             if (Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
             {
@@ -84,15 +88,16 @@ public class TriggerInteract : MonoBehaviour
                 {
                     StopCoroutine(pressRingAnimation);
                 }
-                pressRingAnimation = StartCoroutine(AnimatePressRing());
+                if (pressRing != null)
+                    pressRingAnimation = StartCoroutine(AnimatePressRing());
 
-                CameraInteract.selected.SendMessage("Interact");
+                CameraInteract.InteractSelectedObject(CameraInteract.selected);
             }
         }
 
         // OBJECT INTERACT - Hold
         // This is used for interacting with objects containing the "Interact" script, similar to Twist and Dwell
-        else if(CameraInteract.selected && CameraInteract.selected.interactModeOverride == InteractMode.Hold)
+        else if (CameraInteract.selected && CameraInteract.GetSelectedInteractionMode() == InteractMode.Hold)
         {
             // Reset Global hold timer if gaze moved away from Global space
             globalHoldTimer = minGlobalHoldTime;
@@ -103,28 +108,34 @@ public class TriggerInteract : MonoBehaviour
                 StopCoroutine(pressRingAnimation);
                 pressRingAnimation = null;
             }
-            pressRing.transform.localScale = pressRingOriginalScale;
+            if (pressRing != null)
+                pressRing.transform.localScale = pressRingOriginalScale;
 
             // VISUALS
             // Turn on base and press reticle center
-            baseReticle.SetActive(true);
-            pressReticle.SetActive(true);
+            SetActiveIfAssigned(baseReticle, true);
+            SetActiveIfAssigned(pressReticle, true);
             // Turn off press ring
-            pressRing.SetActive(false);
+            SetActiveIfAssigned(pressRing, false);
             // Turn off hold visual
-            globalTriggerHoldProgress.SetActive(false);
+            SetActiveIfAssigned(globalTriggerHoldProgress, false);
             
             if (Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
             {
                 longPress = false;
                 objectHoldTimer = minObjectHoldTime;
                 pressBeganInGlobalSpace = false;
+                objectHoldTarget = CameraInteract.selected;
             }
             
-            if (Touchscreen.current.primaryTouch.press.isPressed && longPress == false && pressBeganInGlobalSpace == false)
+            if (Touchscreen.current.primaryTouch.press.isPressed &&
+                !longPress &&
+                !pressBeganInGlobalSpace &&
+                objectHoldTarget != null &&
+                CameraInteract.selected == objectHoldTarget)
             {
                 // set visuals on only after trigger is held down
-                holdCircle.SetActive(true);
+                SetActiveIfAssigned(holdCircle, true);
 
                 if (objectHoldTimer > 0f)
                 {
@@ -137,16 +148,23 @@ public class TriggerInteract : MonoBehaviour
                     longPress = true;
 
                     // Turn off hold visual
-                    holdCircle.SetActive(false);
+                    SetActiveIfAssigned(holdCircle, false);
 
-                    CameraInteract.selected.SendMessage("Interact");
+                    CameraInteract.InteractSelectedObject(objectHoldTarget);
                 }
+            }
+            else if (Touchscreen.current.primaryTouch.press.isPressed && objectHoldTarget != CameraInteract.selected)
+            {
+                objectHoldTarget = null;
+                objectHoldTimer = minObjectHoldTime;
+                SetActiveIfAssigned(holdCircle, false);
             }
 
             if (Touchscreen.current.primaryTouch.press.wasReleasedThisFrame && longPress == false && pressBeganInGlobalSpace == false)
             {
                 // Turn off hold visual
-                holdCircle.SetActive(false);
+                SetActiveIfAssigned(holdCircle, false);
+                objectHoldTarget = null;
             }
         }
 
@@ -155,6 +173,8 @@ public class TriggerInteract : MonoBehaviour
         // A short press and release invokes GlobalPress; a sufficiently long hold invokes GlobalHold.
         else
         {
+            CancelObjectHoldWhilePressed();
+
             // Reset Object hold timer if gaze moved away from Object space
             objectHoldTimer = minObjectHoldTime;
 
@@ -164,16 +184,17 @@ public class TriggerInteract : MonoBehaviour
                 StopCoroutine(pressRingAnimation);
                 pressRingAnimation = null;
             }
-            pressRing.transform.localScale = pressRingOriginalScale;
+            if (pressRing != null)
+                pressRing.transform.localScale = pressRingOriginalScale;
 
             // VISUALS
             // Turn off hold visual
-            holdCircle.SetActive(false);
+            SetActiveIfAssigned(holdCircle, false);
             // Turn off press visual
-            pressReticle.SetActive(false);
-            pressRing.SetActive(false);
+            SetActiveIfAssigned(pressReticle, false);
+            SetActiveIfAssigned(pressRing, false);
             // Turn on base
-            baseReticle.SetActive(true);
+            SetActiveIfAssigned(baseReticle, true);
             
             if (Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
             {
@@ -197,7 +218,7 @@ public class TriggerInteract : MonoBehaviour
                         globalHoldProgressStarted = true;
 
                         // set visuals on only after trigger is held down
-                        globalTriggerHoldProgress.SetActive(true);
+                        SetActiveIfAssigned(globalTriggerHoldProgress, true);
 
                         globalHoldTimer = globalHoldTimer - Time.deltaTime;
 
@@ -209,9 +230,10 @@ public class TriggerInteract : MonoBehaviour
                 {
                     longPress = true;
                     // Turn off hold visual
-                    globalTriggerHoldProgress.SetActive(false);
+                    SetActiveIfAssigned(globalTriggerHoldProgress, false);
                     // Execute logic defined in GlobalTriggerHold
-                    globalTriggerHold.Execute();
+                    if (globalTriggerHold != null)
+                        globalTriggerHold.Execute();
                 }
             }
             else
@@ -219,13 +241,14 @@ public class TriggerInteract : MonoBehaviour
                 // Reset timer
                 globalHoldTimer = minGlobalHoldTime;
                 // Turn off hold visual
-                globalTriggerHoldProgress.SetActive(false);
+                SetActiveIfAssigned(globalTriggerHoldProgress, false);
             }
 
             if (Touchscreen.current.primaryTouch.press.wasReleasedThisFrame && longPress == false && pressBeganInGlobalSpace == true && globalHoldProgressStarted == false)
             {
                 // Execute logic defined in GlobalTriggerPress
-                globalTriggerPress.Execute();
+                if (globalTriggerPress != null)
+                    globalTriggerPress.Execute();
             }
         }
     }
@@ -233,19 +256,30 @@ public class TriggerInteract : MonoBehaviour
     void HoldCircleAnimation()
     {
         // Animate HoldCircle using the same shader formula as CameraInteract's DwellCircle.
-        holdCircle.GetComponent<Renderer>().sharedMaterial.SetFloat("_Cutoff", Mathf.Clamp(1.3f - (minObjectHoldTime - objectHoldTimer) / minObjectHoldTime * 1.3f, 0.0f, 1.0f)
-        );
+        if (holdCircle == null || minObjectHoldTime <= 0f)
+            return;
+
+        Renderer holdRenderer = holdCircle.GetComponent<Renderer>();
+        if (holdRenderer != null && holdRenderer.sharedMaterial != null)
+            holdRenderer.sharedMaterial.SetFloat("_Cutoff", Mathf.Clamp(1.3f - (minObjectHoldTime - objectHoldTimer) / minObjectHoldTime * 1.3f, 0.0f, 1.0f));
     }
 
     void GlobalHoldCircleAnimation()
     {
         // Animate HoldCircle using the same shader formula as CameraInteract's DwellCircle.
-        globalTriggerHoldProgress.GetComponentInChildren<Renderer>().sharedMaterial.SetFloat("_Cutoff", Mathf.Clamp(1.3f - (minGlobalHoldTime - globalHoldTimer  - 0.5f) / (minGlobalHoldTime  - 0.5f) * 1.3f, 0.0f, 1.0f)
-        );
+        if (globalTriggerHoldProgress == null || minGlobalHoldTime <= 0.5f)
+            return;
+
+        Renderer holdRenderer = globalTriggerHoldProgress.GetComponentInChildren<Renderer>();
+        if (holdRenderer != null && holdRenderer.sharedMaterial != null)
+            holdRenderer.sharedMaterial.SetFloat("_Cutoff", Mathf.Clamp(1.3f - (minGlobalHoldTime - globalHoldTimer - 0.5f) / (minGlobalHoldTime - 0.5f) * 1.3f, 0.0f, 1.0f));
     }
 
     IEnumerator AnimatePressRing()
     {
+        if (pressRing == null || pressAnimationDuration <= 0f)
+            yield break;
+
         Vector3 largeScale = pressRingOriginalScale;
         Vector3 smallScale = largeScale * pressRingPressedScale;
 
@@ -268,5 +302,21 @@ public class TriggerInteract : MonoBehaviour
         }
 
         pressRing.transform.localScale = largeScale;
+    }
+
+    private static void SetActiveIfAssigned(GameObject target, bool active)
+    {
+        if (target != null)
+            target.SetActive(active);
+    }
+
+    private void CancelObjectHoldWhilePressed()
+    {
+        if (!Touchscreen.current.primaryTouch.press.isPressed || objectHoldTarget == null)
+            return;
+
+        objectHoldTarget = null;
+        objectHoldTimer = minObjectHoldTime;
+        SetActiveIfAssigned(holdCircle, false);
     }
 }
