@@ -18274,14 +18274,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907292807}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.2684995, z: 0, w: 0.96327984}
-  m_LocalPosition: {x: -0.591, y: 1.38, z: -16.076}
+  m_LocalRotation: {x: 0, y: 0.4702418, z: 0, w: 0.88253766}
+  m_LocalPosition: {x: -6.21, y: 1.38, z: -15.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 959308593}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -31.15, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 56.1, z: 0}
 --- !u!1 &907475442
 GameObject:
   m_ObjectHideFlags: 0
@@ -33305,6 +33305,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1583556015}
+    - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1583556016}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
 --- !u!1 &1583556014 stripped
 GameObject:
@@ -33334,6 +33337,21 @@ CapsuleCollider:
   m_Height: 21.37
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 10.36}
+--- !u!114 &1583556016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583556014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5396477a5d43d548b895786b44d8863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactive
+  interactModeOverride: 0
+  twistMultiplierOverride: 4
+  dwellTimerOverride: 0
 --- !u!1 &1587710509
 GameObject:
   m_ObjectHideFlags: 0
