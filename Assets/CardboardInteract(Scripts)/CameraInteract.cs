@@ -6,7 +6,9 @@ public enum InteractMode
 {
     None = 0,
     Dwell,
-    Twist
+    Twist,
+    Press,
+    Hold
 }
 
 public class CameraInteract : MonoBehaviour
@@ -39,11 +41,16 @@ public class CameraInteract : MonoBehaviour
         return instance.player ? instance.player : Camera.main.transform.parent;
     }
     public static float GetPlayerHeight() {  return instance.playerHeight; }
+    public static InteractMode GetSelectedInteractionMode()
+    {
+        return instance != null && selected != null ? instance.lastMode : InteractMode.None;
+    }
 
     private void Start()
     {
         instance = this;
     }
+
     public void SetNormalLayer()
     {
         interactLayer = ~0;
@@ -53,6 +60,7 @@ public class CameraInteract : MonoBehaviour
     {
         interactLayer = LayerMask.GetMask("Menu");
     }
+
     void Update()
     {
         if (Physics.Raycast(transform.position, transform.forward, out hit, maxInteractDistance, interactLayer) &&
@@ -80,14 +88,16 @@ public class CameraInteract : MonoBehaviour
             selected = null;
         }
 
-        reticle.SetActive(selected && lastMode == InteractMode.Dwell);
+        reticle.SetActive(selected && lastMode != InteractMode.Twist);
 
-        dwellCircle.SetActive(selected && lastMode == InteractMode.Dwell && Time.time - timer < dwellTimer);
+        if (lastMode != InteractMode.Hold || selected == null)
+            dwellCircle.SetActive(selected && lastMode == InteractMode.Dwell && Time.time - timer < dwellTimer);
+
         if(selected && lastMode == InteractMode.Dwell)
         {
             if(Time.time-timer > dwellTimer && timer > 0)
             {
-                InteractSelected();
+                InteractSelectedObject(selected);
                 timer = 0;
             }
             dwellCircle.GetComponent<Renderer>().sharedMaterial.SetFloat("_Cutoff", Mathf.Clamp(1.3f - (Time.time - timer) / dwellTimer * 1.3f, 0.0f, 1.0f));
@@ -123,7 +133,7 @@ public class CameraInteract : MonoBehaviour
             twistCrosshair.transform.GetChild(0).localRotation = Quaternion.Euler(crosshairEuler);
             if ((angdiff <= -45f || angdiff >= 45f) && rollReset && selected)
             {
-                InteractSelected();
+                InteractSelectedObject(selected);
                 timer = 0;
                 rollReset = false;
             }
@@ -132,13 +142,13 @@ public class CameraInteract : MonoBehaviour
         }
     }
 
-    private void InteractSelected()
+    public static bool InteractSelectedObject(Interactive item)
     {
-        Interactive item = selected;
         if (item == null || !item.IsInteractable)
-            return;
+            return false;
 
         item.NotifyInteracted();
-        item.SendMessage("Interact");
+        item.SendMessage("Interact", SendMessageOptions.DontRequireReceiver);
+        return true;
     }
 }
