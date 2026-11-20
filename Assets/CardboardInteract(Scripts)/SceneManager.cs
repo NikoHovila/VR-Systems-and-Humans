@@ -8,7 +8,7 @@ using UnitySceneManager = UnityEngine.SceneManagement.SceneManager;
 
 public class SceneManager : MonoBehaviour
 {
-    private const int MaximumVisits = 4;
+    private const int MaximumVisits = 6;
     private const int MaximumItemsPerStep = 5;
     private const string VisitCountPrefix = "SceneVisitCountByPath_v2_";
     private const string SceneNameSuffix = "_SceneName";
@@ -21,6 +21,8 @@ public class SceneManager : MonoBehaviour
     public List<GameObject> secondVisitHideObjects = new List<GameObject>();
     public List<GameObject> thirdVisitHideObjects = new List<GameObject>();
     public List<GameObject> fourthVisitHideObjects = new List<GameObject>();
+    public List<GameObject> fifthVisitHideObjects = new List<GameObject>();
+    public List<GameObject> sixthVisitHideObjects = new List<GameObject>();
 
     [Header("First Visit - Narrator audio")]
     public AudioClip narratorAudio1;
@@ -73,6 +75,32 @@ public class SceneManager : MonoBehaviour
 
     [Header("Fourth Visit - Scene transition")]
     [SerializeField] private string fourthVisitNextScene;
+
+    [Header("Fifth Visit - Narrator audio")]
+    public AudioClip fifthVisitNarratorAudio1;
+    public AudioClip fifthVisitNarratorAudio2;
+    public AudioClip fifthVisitNarratorAudio3;
+
+    [Header("Fifth Visit - Item lists")]
+    public List<GameObject> fifthVisitItemList1 = new List<GameObject>();
+    public List<GameObject> fifthVisitItemList2 = new List<GameObject>();
+    public List<GameObject> fifthVisitItemList3 = new List<GameObject>();
+
+    [Header("Fifth Visit - Scene transition")]
+    [SerializeField] private string fifthVisitNextScene;
+
+    [Header("Sixth Visit - Narrator audio")]
+    public AudioClip sixthVisitNarratorAudio1;
+    public AudioClip sixthVisitNarratorAudio2;
+    public AudioClip sixthVisitNarratorAudio3;
+
+    [Header("Sixth Visit - Item lists")]
+    public List<GameObject> sixthVisitItemList1 = new List<GameObject>();
+    public List<GameObject> sixthVisitItemList2 = new List<GameObject>();
+    public List<GameObject> sixthVisitItemList3 = new List<GameObject>();
+
+    [Header("Sixth Visit - Scene transition")]
+    [SerializeField] private string sixthVisitNextScene;
 
     private readonly HashSet<Interactive> trackedItems = new HashSet<Interactive>();
     private readonly HashSet<Interactive> currentStepItems = new HashSet<Interactive>();
@@ -206,11 +234,21 @@ public class SceneManager : MonoBehaviour
                     new[] { thirdVisitNarratorAudio1, thirdVisitNarratorAudio2, thirdVisitNarratorAudio3 },
                     new[] { thirdVisitItemList1, thirdVisitItemList2, thirdVisitItemList3 },
                     thirdVisitNextScene);
-            default:
+            case 4:
                 return new VisitConfiguration(
                     new[] { fourthVisitNarratorAudio1, fourthVisitNarratorAudio2, fourthVisitNarratorAudio3 },
                     new[] { fourthVisitItemList1, fourthVisitItemList2, fourthVisitItemList3 },
                     fourthVisitNextScene);
+            case 5:
+                return new VisitConfiguration(
+                    new[] { fifthVisitNarratorAudio1, fifthVisitNarratorAudio2, fifthVisitNarratorAudio3 },
+                    new[] { fifthVisitItemList1, fifthVisitItemList2, fifthVisitItemList3 },
+                    fifthVisitNextScene);
+            default:
+                return new VisitConfiguration(
+                    new[] { sixthVisitNarratorAudio1, sixthVisitNarratorAudio2, sixthVisitNarratorAudio3 },
+                    new[] { sixthVisitItemList1, sixthVisitItemList2, sixthVisitItemList3 },
+                    sixthVisitNextScene);
         }
     }
 
@@ -248,7 +286,9 @@ public class SceneManager : MonoBehaviour
             itemList1, itemList2, itemList3,
             secondVisitItemList1, secondVisitItemList2, secondVisitItemList3,
             thirdVisitItemList1, thirdVisitItemList2, thirdVisitItemList3,
-            fourthVisitItemList1, fourthVisitItemList2, fourthVisitItemList3
+            fourthVisitItemList1, fourthVisitItemList2, fourthVisitItemList3,
+            fifthVisitItemList1, fifthVisitItemList2, fifthVisitItemList3,
+            sixthVisitItemList1, sixthVisitItemList2, sixthVisitItemList3
         };
     }
 
@@ -269,6 +309,12 @@ public class SceneManager : MonoBehaviour
                 break;
             case 4:
                 objectsToHide = fourthVisitHideObjects;
+                break;
+            case 5:
+                objectsToHide = fifthVisitHideObjects;
+                break;
+            case 6:
+                objectsToHide = sixthVisitHideObjects;
                 break;
         }
 
