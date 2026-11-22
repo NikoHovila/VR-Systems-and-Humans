@@ -251,8 +251,8 @@ MonoBehaviour:
   fourthVisitHideObjects: []
   fifthVisitHideObjects: []
   sixthVisitHideObjects: []
-  narratorAudio1: {fileID: 8300000, guid: 175c7b7664bc5b14b8f78713234a6c28, type: 3}
-  narratorAudio2: {fileID: 8300000, guid: 7a6232206642e3440ada3dae6bc546cc, type: 3}
+  narratorAudio1: {fileID: 8300000, guid: f95ec70fd06715048a7504ecf22bbfa1, type: 3}
+  narratorAudio2: {fileID: 8300000, guid: 7000a2cba85352f469b3a20bb8ebf8fa, type: 3}
   narratorAudio3: {fileID: 0}
   itemList1:
   - {fileID: 5374241327471958587}

@@ -10345,10 +10345,13 @@ MonoBehaviour:
   thirdVisitHideObjects:
   - {fileID: 1485933236}
   - {fileID: 835730025}
-  fourthVisitHideObjects: []
+  - {fileID: 1366865102}
+  fourthVisitHideObjects:
+  - {fileID: 1485933236}
+  - {fileID: 835730025}
   fifthVisitHideObjects: []
   sixthVisitHideObjects: []
-  narratorAudio1: {fileID: 8300000, guid: 175c7b7664bc5b14b8f78713234a6c28, type: 3}
+  narratorAudio1: {fileID: 8300000, guid: 2c74c6d632a38c844a21a5c44afc7672, type: 3}
   narratorAudio2: {fileID: 0}
   narratorAudio3: {fileID: 0}
   itemList1:
@@ -10370,7 +10373,7 @@ MonoBehaviour:
   itemList2: []
   itemList3: []
   nextScene: FlowerForest
-  secondVisitNarratorAudio1: {fileID: 8300000, guid: 7d50cbfdee9d01c4f941c05dbdcfce6a, type: 3}
+  secondVisitNarratorAudio1: {fileID: 8300000, guid: 4b7ba46c738a5284eb825f9db62746fd, type: 3}
   secondVisitNarratorAudio2: {fileID: 0}
   secondVisitNarratorAudio3: {fileID: 0}
   secondVisitItemList1:
@@ -10378,18 +10381,18 @@ MonoBehaviour:
   secondVisitItemList2: []
   secondVisitItemList3: []
   secondVisitNextScene: ScaryForest
-  thirdVisitNarratorAudio1: {fileID: 8300000, guid: 175c7b7664bc5b14b8f78713234a6c28, type: 3}
-  thirdVisitNarratorAudio2: {fileID: 8300000, guid: 7d50cbfdee9d01c4f941c05dbdcfce6a, type: 3}
+  thirdVisitNarratorAudio1: {fileID: 8300000, guid: cf193bdf673880145a86a8ab29b85171, type: 3}
+  thirdVisitNarratorAudio2: {fileID: 0}
   thirdVisitNarratorAudio3: {fileID: 0}
-  thirdVisitItemList1:
-  - {fileID: 1583556014}
+  thirdVisitItemList1: []
   thirdVisitItemList2: []
   thirdVisitItemList3: []
-  thirdVisitNextScene: 
-  fourthVisitNarratorAudio1: {fileID: 0}
-  fourthVisitNarratorAudio2: {fileID: 0}
+  thirdVisitNextScene: FlowerForest
+  fourthVisitNarratorAudio1: {fileID: 8300000, guid: 098a35ad86c16fb4c81090d7649f6088, type: 3}
+  fourthVisitNarratorAudio2: {fileID: 8300000, guid: 5128b823a7ecd39459cfff82721163ba, type: 3}
   fourthVisitNarratorAudio3: {fileID: 0}
-  fourthVisitItemList1: []
+  fourthVisitItemList1:
+  - {fileID: 1583556014}
   fourthVisitItemList2: []
   fourthVisitItemList3: []
   fourthVisitNextScene: 
@@ -33333,7 +33336,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.22
+  m_Radius: 3.96
   m_Height: 21.37
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 10.36}
@@ -46420,7 +46423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2942180062014396445}
   m_Layer: 0
-  m_Name: flower
+  m_Name: Altar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

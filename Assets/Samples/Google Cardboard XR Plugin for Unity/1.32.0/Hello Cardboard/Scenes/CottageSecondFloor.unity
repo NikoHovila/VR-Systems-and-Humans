@@ -433,7 +433,9 @@ MonoBehaviour:
   secondVisitHideObjects: []
   thirdVisitHideObjects: []
   fourthVisitHideObjects: []
-  narratorAudio1: {fileID: 8300000, guid: 175c7b7664bc5b14b8f78713234a6c28, type: 3}
+  fifthVisitHideObjects: []
+  sixthVisitHideObjects: []
+  narratorAudio1: {fileID: 8300000, guid: cc9cd9827c3195f4d89c4b0807a3d0d6, type: 3}
   narratorAudio2: {fileID: 0}
   narratorAudio3: {fileID: 0}
   itemList1:
@@ -441,13 +443,12 @@ MonoBehaviour:
   itemList2: []
   itemList3: []
   nextScene: Mine
-  secondVisitNarratorAudio1: {fileID: 8300000, guid: 7d50cbfdee9d01c4f941c05dbdcfce6a, type: 3}
-  secondVisitNarratorAudio2: {fileID: 8300000, guid: 7a6232206642e3440ada3dae6bc546cc, type: 3}
+  secondVisitNarratorAudio1: {fileID: 8300000, guid: a6705ceca722985449793263d91548b0, type: 3}
+  secondVisitNarratorAudio2: {fileID: 8300000, guid: 4c2e6cfe25d53e0468aa92a75ed76d63, type: 3}
   secondVisitNarratorAudio3: {fileID: 0}
   secondVisitItemList1:
-  - {fileID: 793152007}
-  secondVisitItemList2:
   - {fileID: 1666146401}
+  secondVisitItemList2: []
   secondVisitItemList3: []
   secondVisitNextScene: MagicMirrorScene
   thirdVisitNarratorAudio1: {fileID: 0}
@@ -464,6 +465,20 @@ MonoBehaviour:
   fourthVisitItemList2: []
   fourthVisitItemList3: []
   fourthVisitNextScene: 
+  fifthVisitNarratorAudio1: {fileID: 0}
+  fifthVisitNarratorAudio2: {fileID: 0}
+  fifthVisitNarratorAudio3: {fileID: 0}
+  fifthVisitItemList1: []
+  fifthVisitItemList2: []
+  fifthVisitItemList3: []
+  fifthVisitNextScene: 
+  sixthVisitNarratorAudio1: {fileID: 0}
+  sixthVisitNarratorAudio2: {fileID: 0}
+  sixthVisitNarratorAudio3: {fileID: 0}
+  sixthVisitItemList1: []
+  sixthVisitItemList2: []
+  sixthVisitItemList3: []
+  sixthVisitNextScene: 
 --- !u!4 &516985107
 Transform:
   m_ObjectHideFlags: 0

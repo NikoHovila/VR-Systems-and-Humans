@@ -432,7 +432,7 @@ MonoBehaviour:
   - {fileID: 3368818321536600132}
   - {fileID: 329784199029362394}
   - {fileID: 5048893674075878051}
-  narratorAudio1: {fileID: 8300000, guid: 175c7b7664bc5b14b8f78713234a6c28, type: 3}
+  narratorAudio1: {fileID: 8300000, guid: 2e2fbdaa5b49dc14791880c7567ff7a4, type: 3}
   narratorAudio2: {fileID: 0}
   narratorAudio3: {fileID: 0}
   itemList1:
@@ -446,7 +446,7 @@ MonoBehaviour:
   itemList2: []
   itemList3: []
   nextScene: CottageFirstFloor
-  secondVisitNarratorAudio1: {fileID: 8300000, guid: 7d50cbfdee9d01c4f941c05dbdcfce6a, type: 3}
+  secondVisitNarratorAudio1: {fileID: 8300000, guid: b3ee07a6244d76e4da3744d2320c53bc, type: 3}
   secondVisitNarratorAudio2: {fileID: 0}
   secondVisitNarratorAudio3: {fileID: 0}
   secondVisitItemList1:
@@ -454,7 +454,7 @@ MonoBehaviour:
   secondVisitItemList2: []
   secondVisitItemList3: []
   secondVisitNextScene: CottageSecondFloor
-  thirdVisitNarratorAudio1: {fileID: 8300000, guid: 7a6232206642e3440ada3dae6bc546cc, type: 3}
+  thirdVisitNarratorAudio1: {fileID: 8300000, guid: 98fca8c847f34cf449eab49e1088bafb, type: 3}
   thirdVisitNarratorAudio2: {fileID: 0}
   thirdVisitNarratorAudio3: {fileID: 0}
   thirdVisitItemList1:
@@ -462,7 +462,7 @@ MonoBehaviour:
   thirdVisitItemList2: []
   thirdVisitItemList3: []
   thirdVisitNextScene: CottageSecondFloor
-  fourthVisitNarratorAudio1: {fileID: 8300000, guid: 175c7b7664bc5b14b8f78713234a6c28, type: 3}
+  fourthVisitNarratorAudio1: {fileID: 8300000, guid: 909c28ddbd9eb8c4b86a81b359c1098e, type: 3}
   fourthVisitNarratorAudio2: {fileID: 0}
   fourthVisitNarratorAudio3: {fileID: 0}
   fourthVisitItemList1:
@@ -470,16 +470,16 @@ MonoBehaviour:
   fourthVisitItemList2: []
   fourthVisitItemList3: []
   fourthVisitNextScene: CottageFirstFloor
-  fifthVisitNarratorAudio1: {fileID: 8300000, guid: 175c7b7664bc5b14b8f78713234a6c28, type: 3}
-  fifthVisitNarratorAudio2: {fileID: 0}
+  fifthVisitNarratorAudio1: {fileID: 8300000, guid: f3ae4e2b00077d54ea686f62cf92d4b0, type: 3}
+  fifthVisitNarratorAudio2: {fileID: 8300000, guid: bdbf91c71e2bebb478d1f962b9b8cec6, type: 3}
   fifthVisitNarratorAudio3: {fileID: 0}
   fifthVisitItemList1:
   - {fileID: 930538542}
   fifthVisitItemList2: []
   fifthVisitItemList3: []
   fifthVisitNextScene: CottageOutside
-  sixthVisitNarratorAudio1: {fileID: 8300000, guid: 175c7b7664bc5b14b8f78713234a6c28, type: 3}
-  sixthVisitNarratorAudio2: {fileID: 0}
+  sixthVisitNarratorAudio1: {fileID: 8300000, guid: f5056b2a000660949a26c4156f42908f, type: 3}
+  sixthVisitNarratorAudio2: {fileID: 8300000, guid: fd3606554ffacf44ea4369b78b881f2b, type: 3}
   sixthVisitNarratorAudio3: {fileID: 0}
   sixthVisitItemList1:
   - {fileID: 656448478}

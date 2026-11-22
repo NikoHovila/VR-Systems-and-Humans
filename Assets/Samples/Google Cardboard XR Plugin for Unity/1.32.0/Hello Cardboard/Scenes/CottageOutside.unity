@@ -251,15 +251,15 @@ MonoBehaviour:
   fourthVisitHideObjects: []
   fifthVisitHideObjects: []
   sixthVisitHideObjects: []
-  narratorAudio1: {fileID: 8300000, guid: 175c7b7664bc5b14b8f78713234a6c28, type: 3}
-  narratorAudio2: {fileID: 0}
+  narratorAudio1: {fileID: 8300000, guid: 96c1cfa10303884479bcfc39a7cb55cc, type: 3}
+  narratorAudio2: {fileID: 8300000, guid: d9839744bffd1f74dae9c591f1f97b32, type: 3}
   narratorAudio3: {fileID: 0}
   itemList1:
   - {fileID: 1867724512}
   itemList2: []
   itemList3: []
   nextScene: CottageFirstFloor
-  secondVisitNarratorAudio1: {fileID: 8300000, guid: 7d50cbfdee9d01c4f941c05dbdcfce6a, type: 3}
+  secondVisitNarratorAudio1: {fileID: 8300000, guid: 2285e10fd3b305e458cbd8424ac88989, type: 3}
   secondVisitNarratorAudio2: {fileID: 0}
   secondVisitNarratorAudio3: {fileID: 0}
   secondVisitItemList1:

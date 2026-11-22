@@ -338,10 +338,7 @@ public class SceneManager : MonoBehaviour
             if (narratorClip == null || stepItems.Count == 0)
                 continue;
 
-            narrationSource.clip = narratorClip;
-            narrationSource.Play();
-            while (narrationSource.isPlaying)
-                yield return null;
+            yield return PlayNarratorAndWait(narratorClip);
 
             currentStepItems.Clear();
             interactedItems.Clear();
@@ -364,6 +361,26 @@ public class SceneManager : MonoBehaviour
         }
 
         LoadNextScene(configuration.NextScene);
+    }
+
+    private IEnumerator PlayNarratorAndWait(AudioClip narratorClip)
+    {
+        narrationSource.Stop();
+        narrationSource.clip = narratorClip;
+        narrationSource.loop = false;
+
+        const double schedulingLeadTime = 0.1d;
+        double playbackStartTime = AudioSettings.dspTime + schedulingLeadTime;
+        double playbackDuration = narratorClip.length / Mathf.Max(Mathf.Abs(narrationSource.pitch), 0.01f);
+        double playbackEndTime = playbackStartTime + playbackDuration;
+
+        narrationSource.PlayScheduled(playbackStartTime);
+
+        while (AudioSettings.dspTime < playbackEndTime)
+            yield return null;
+
+        while (narrationSource.isPlaying)
+            yield return null;
     }
 
     private List<Interactive> GetStepItems(List<GameObject> objects)
