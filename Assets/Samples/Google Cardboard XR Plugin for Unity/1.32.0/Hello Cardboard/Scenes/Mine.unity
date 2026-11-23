@@ -405,104 +405,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -536394890029949728, guid: 2f3f57f2f5fb3694eaacab16fe5fa7df, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8944463593187732030, guid: 2f3f57f2f5fb3694eaacab16fe5fa7df, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 952493119}
-    - targetCorrespondingSourceObject: {fileID: -536394890029949728, guid: 2f3f57f2f5fb3694eaacab16fe5fa7df, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 952493118}
-    - targetCorrespondingSourceObject: {fileID: -536394890029949728, guid: 2f3f57f2f5fb3694eaacab16fe5fa7df, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 952493121}
-    - targetCorrespondingSourceObject: {fileID: -536394890029949728, guid: 2f3f57f2f5fb3694eaacab16fe5fa7df, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 952493120}
+      addedObject: {fileID: 1056961486}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: -5645937942226959685, guid: 2f3f57f2f5fb3694eaacab16fe5fa7df, type: 3}
---- !u!1 &952493117 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -536394890029949728, guid: 2f3f57f2f5fb3694eaacab16fe5fa7df, type: 3}
+--- !u!4 &952493117 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8944463593187732030, guid: 2f3f57f2f5fb3694eaacab16fe5fa7df, type: 3}
   m_PrefabInstance: {fileID: 952493116}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &952493118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952493117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95caf21551809d34a830659746980a65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TeleportSurface
-  interactModeOverride: 0
-  twistMultiplierOverride: 4
-  dwellTimerOverride: 0
---- !u!65 &952493119
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952493117}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3, y: 5.93, z: 1.08}
-  m_Center: {x: 14.44, y: -1.15, z: 0.2}
---- !u!65 &952493120
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952493117}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.3, y: 8.43, z: 1.08}
-  m_Center: {x: 12.95, y: 1.87, z: 0.1}
---- !u!65 &952493121
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952493117}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 14.38, y: 12.6, z: 1.08}
-  m_Center: {x: 4.1, y: 3.92, z: 0.1}
 --- !u!1 &959308587
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +729,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd68f027e715c44aa8d097000d4cccfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: CardboardSamples::CardboardStartup
+--- !u!1 &1056961485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1056961486}
+  - component: {fileID: 1056961488}
+  - component: {fileID: 1056961487}
+  m_Layer: 0
+  m_Name: Teleportti
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1056961486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056961485}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 952493117}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1056961487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056961485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95caf21551809d34a830659746980a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportSurface
+  interactModeOverride: 0
+  twistMultiplierOverride: 0
+  dwellTimerOverride: 0
+--- !u!64 &1056961488
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056961485}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5989612195779364666, guid: 2f3f57f2f5fb3694eaacab16fe5fa7df, type: 3}
 --- !u!1 &1264402056
 GameObject:
   m_ObjectHideFlags: 0
