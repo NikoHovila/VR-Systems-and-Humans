@@ -1944,7 +1944,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5724745
+  m_Radius: 0.28623724
   m_Center: {x: 0.0023889542, y: 0.0000026226048, z: 0.124979705}
 --- !u!114 &5259900610247314591
 MonoBehaviour:
@@ -1958,7 +1958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!23 &5285585869193260563
@@ -2072,7 +2072,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.46862766
+  m_Radius: 0.23431385
   m_Center: {x: 0, y: -0.12746829, z: -0.0000009536743}
 --- !u!114 &5374241327471958589
 MonoBehaviour:
@@ -2086,7 +2086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!1 &5405699335211260680
@@ -2188,7 +2188,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5649728
+  m_Radius: 0.2824864
   m_Center: {x: 0, y: 0.0000014305112, z: -0.0000009834766}
 --- !u!114 &5563017603342662597
 MonoBehaviour:
@@ -2202,7 +2202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!1 &5596187749479881549
@@ -2349,7 +2349,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.44660768
+  m_Radius: 0.22330385
   m_Center: {x: -0.000000029802322, y: 0.0000011920927, z: -0.0000014305115}
 --- !u!114 &5807196946556288388
 MonoBehaviour:
@@ -2363,7 +2363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!4 &6011842371824805549
@@ -2400,7 +2400,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.44660768
+  m_Radius: 0.22330385
   m_Center: {x: -0.000000029802322, y: 0.0000019073486, z: -0.0000009536743}
 --- !u!114 &6011842371824805551
 MonoBehaviour:
@@ -2414,7 +2414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!4 &6121183401449370102
@@ -2746,7 +2746,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5724745
+  m_Radius: 0.28623724
   m_Center: {x: 0.0023889542, y: 0.000001430511, z: 0.12497923}
 --- !u!114 &7334066400058792315
 MonoBehaviour:
@@ -2760,7 +2760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!1 &7414449986723778354
@@ -2984,7 +2984,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.4443099
+  m_Radius: 0.22215495
   m_Center: {x: 0, y: 0.0000026226048, z: -0.0000009536743}
 --- !u!114 &8159216151343708903
 MonoBehaviour:
@@ -2998,7 +2998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!23 &8482052154738152028
@@ -3068,7 +3068,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.4443099
+  m_Radius: 0.22215495
   m_Center: {x: 0, y: 0.00000166893, z: -0.0000009536743}
 --- !u!114 &8482052154738152030
 MonoBehaviour:
@@ -3082,7 +3082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!33 &8900802608538071025
@@ -3112,7 +3112,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5649728
+  m_Radius: 0.2824864
   m_Center: {x: 0, y: 0.0000026226046, z: -0.0000009834766}
 --- !u!114 &8900802608538071027
 MonoBehaviour:
@@ -3126,7 +3126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!23 &9014681184107110731
@@ -3196,7 +3196,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.46862778
+  m_Radius: 0.2343139
   m_Center: {x: -0.0000033255135, y: -0.12747008, z: -0.000001913047}
 --- !u!114 &9014681184107110733
 MonoBehaviour:
@@ -3210,7 +3210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!1660057539 &9223372036854775807

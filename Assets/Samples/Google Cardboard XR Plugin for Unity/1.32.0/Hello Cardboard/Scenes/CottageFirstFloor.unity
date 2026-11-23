@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!1 &516985105
@@ -1315,7 +1315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!65 &949571688
@@ -2139,7 +2139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!1 &1754061852
@@ -2266,7 +2266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!1 &1864502660
@@ -2393,7 +2393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!1 &1867724512
@@ -2968,7 +2968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!1 &7193284048116383745

@@ -10341,14 +10341,61 @@ MonoBehaviour:
   secondVisitHideObjects:
   - {fileID: 1583556014}
   - {fileID: 3278478351981957718}
+  - {fileID: 7873931358326640983}
+  - {fileID: 7599343968130774719}
+  - {fileID: 2043901477038505266}
+  - {fileID: 7110484624365164062}
+  - {fileID: 5973658813321432368}
+  - {fileID: 1430940214445640810}
+  - {fileID: 3479677084089910389}
+  - {fileID: 6739645620374719182}
+  - {fileID: 2002622432446091850}
+  - {fileID: 4157629413897079105}
+  - {fileID: 8977558706792137227}
+  - {fileID: 6826346265823647074}
+  - {fileID: 8926367211545185366}
+  - {fileID: 8947748012933777888}
+  - {fileID: 7156556218609971068}
+  - {fileID: 7032879756157389571}
   - {fileID: 1366865102}
   thirdVisitHideObjects:
   - {fileID: 1485933236}
   - {fileID: 835730025}
-  - {fileID: 1366865102}
+  - {fileID: 7873931358326640983}
+  - {fileID: 7599343968130774719}
+  - {fileID: 2043901477038505266}
+  - {fileID: 7110484624365164062}
+  - {fileID: 5973658813321432368}
+  - {fileID: 1430940214445640810}
+  - {fileID: 3479677084089910389}
+  - {fileID: 6739645620374719182}
+  - {fileID: 2002622432446091850}
+  - {fileID: 4157629413897079105}
+  - {fileID: 8977558706792137227}
+  - {fileID: 6826346265823647074}
+  - {fileID: 8926367211545185366}
+  - {fileID: 8947748012933777888}
+  - {fileID: 7156556218609971068}
+  - {fileID: 7032879756157389571}
   fourthVisitHideObjects:
   - {fileID: 1485933236}
   - {fileID: 835730025}
+  - {fileID: 7873931358326640983}
+  - {fileID: 7599343968130774719}
+  - {fileID: 2043901477038505266}
+  - {fileID: 7110484624365164062}
+  - {fileID: 5973658813321432368}
+  - {fileID: 1430940214445640810}
+  - {fileID: 3479677084089910389}
+  - {fileID: 6739645620374719182}
+  - {fileID: 2002622432446091850}
+  - {fileID: 4157629413897079105}
+  - {fileID: 8977558706792137227}
+  - {fileID: 6826346265823647074}
+  - {fileID: 8926367211545185366}
+  - {fileID: 8947748012933777888}
+  - {fileID: 7156556218609971068}
+  - {fileID: 7032879756157389571}
   fifthVisitHideObjects: []
   sixthVisitHideObjects: []
   narratorAudio1: {fileID: 8300000, guid: 2c74c6d632a38c844a21a5c44afc7672, type: 3}
@@ -46554,7 +46601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!1 &3536975722529706947
@@ -46925,7 +46972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!23 &4147914002249251127
@@ -47164,7 +47211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!4 &4419341683746544782
@@ -47954,7 +48001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!33 &5848006785720483497
@@ -48411,7 +48458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!4 &6748949518244620498
@@ -48488,7 +48535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!4 &6885438926498073800
@@ -48696,7 +48743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!4 &7071154887932410886
@@ -48748,7 +48795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!1 &7110484624365164062
@@ -48802,7 +48849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!33 &7133704108615019040
@@ -48912,7 +48959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!23 &7159523588322355469
@@ -49154,7 +49201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!23 &7521069149835824953
@@ -49361,7 +49408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!1 &7603524361037671208
@@ -49566,7 +49613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!1 &7882938541167883749
@@ -50497,7 +50544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!4 &8934612624117004756
@@ -50566,7 +50613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!1 &8969600756106225519
@@ -50688,7 +50735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e5c824527e6143abbfc5f58097d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  interactModeOverride: 0
+  interactModeOverride: 3
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
 --- !u!4 &9198252914053703485
