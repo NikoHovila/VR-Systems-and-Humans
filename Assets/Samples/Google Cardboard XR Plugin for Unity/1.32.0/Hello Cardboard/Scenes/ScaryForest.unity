@@ -119,6 +119,60 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &163549221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 163549222}
+  - component: {fileID: 163549223}
+  m_Layer: 0
+  m_Name: Puu_kolliideri
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &163549222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163549221}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 503686915}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!64 &163549223
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163549221}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5363101878387484069, guid: 4a29c12478282ac4cbb121b13ef7eea7, type: 3}
 --- !u!1 &389255504
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,8 +335,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 358226365536998374, guid: 4a29c12478282ac4cbb121b13ef7eea7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1696419586}
+    - targetCorrespondingSourceObject: {fileID: -5213530753931595722, guid: 4a29c12478282ac4cbb121b13ef7eea7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 163549222}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: -5645937942226959685, guid: 4a29c12478282ac4cbb121b13ef7eea7, type: 3}
+--- !u!4 &503686915 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -5213530753931595722, guid: 4a29c12478282ac4cbb121b13ef7eea7, type: 3}
+  m_PrefabInstance: {fileID: 503686914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &516985105
 GameObject:
   m_ObjectHideFlags: 0
