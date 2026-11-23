@@ -10409,8 +10409,6 @@ MonoBehaviour:
   - {fileID: 835730025}
   - {fileID: 1366865102}
   secondVisitHideObjects:
-  - {fileID: 1583556014}
-  - {fileID: 3278478351981957718}
   - {fileID: 7873931358326640983}
   - {fileID: 7599343968130774719}
   - {fileID: 2043901477038505266}
@@ -10428,48 +10426,14 @@ MonoBehaviour:
   - {fileID: 7156556218609971068}
   - {fileID: 7032879756157389571}
   - {fileID: 1366865102}
-  thirdVisitHideObjects:
-  - {fileID: 1485933236}
   - {fileID: 835730025}
-  - {fileID: 7873931358326640983}
-  - {fileID: 7599343968130774719}
-  - {fileID: 2043901477038505266}
-  - {fileID: 7110484624365164062}
-  - {fileID: 5973658813321432368}
-  - {fileID: 1430940214445640810}
-  - {fileID: 3479677084089910389}
-  - {fileID: 6739645620374719182}
-  - {fileID: 2002622432446091850}
-  - {fileID: 4157629413897079105}
-  - {fileID: 8977558706792137227}
-  - {fileID: 6826346265823647074}
-  - {fileID: 8926367211545185366}
-  - {fileID: 8947748012933777888}
-  - {fileID: 7156556218609971068}
-  - {fileID: 7032879756157389571}
-  fourthVisitHideObjects:
   - {fileID: 1485933236}
-  - {fileID: 835730025}
-  - {fileID: 7873931358326640983}
-  - {fileID: 7599343968130774719}
-  - {fileID: 2043901477038505266}
-  - {fileID: 7110484624365164062}
-  - {fileID: 5973658813321432368}
-  - {fileID: 1430940214445640810}
-  - {fileID: 3479677084089910389}
-  - {fileID: 6739645620374719182}
-  - {fileID: 2002622432446091850}
-  - {fileID: 4157629413897079105}
-  - {fileID: 8977558706792137227}
-  - {fileID: 6826346265823647074}
-  - {fileID: 8926367211545185366}
-  - {fileID: 8947748012933777888}
-  - {fileID: 7156556218609971068}
-  - {fileID: 7032879756157389571}
+  thirdVisitHideObjects: []
+  fourthVisitHideObjects: []
   fifthVisitHideObjects: []
   sixthVisitHideObjects: []
   narratorAudio1: {fileID: 8300000, guid: 2c74c6d632a38c844a21a5c44afc7672, type: 3}
-  narratorAudio2: {fileID: 0}
+  narratorAudio2: {fileID: 8300000, guid: 4b7ba46c738a5284eb825f9db62746fd, type: 3}
   narratorAudio3: {fileID: 0}
   itemList1:
   - {fileID: 7156556218609971068}
@@ -10487,32 +10451,99 @@ MonoBehaviour:
   - {fileID: 2043901477038505266}
   - {fileID: 7110484624365164062}
   - {fileID: 5973658813321432368}
-  itemList2: []
-  itemList3: []
-  nextScene: FlowerForest
-  secondVisitNarratorAudio1: {fileID: 8300000, guid: 4b7ba46c738a5284eb825f9db62746fd, type: 3}
-  secondVisitNarratorAudio2: {fileID: 0}
-  secondVisitNarratorAudio3: {fileID: 0}
-  secondVisitItemList1:
+  itemList2:
   - {fileID: 1867724512}
-  secondVisitItemList2: []
+  itemList3: []
+  nextScene: ScaryForest
+  firstVisitNarration1RevealObjects: []
+  firstVisitNarration2RevealObjects: []
+  firstVisitNarration3RevealObjects: []
+  firstVisitNarration1HideObjects: []
+  firstVisitNarration2HideObjects: []
+  firstVisitNarration3HideObjects: []
+  firstVisitItemList1RevealObjects:
+  - {fileID: 835730025}
+  - {fileID: 1485933236}
+  firstVisitItemList2RevealObjects: []
+  firstVisitItemList3RevealObjects: []
+  firstVisitItemList1HideObjects:
+  - {fileID: 7873931358326640983}
+  - {fileID: 7599343968130774719}
+  - {fileID: 2043901477038505266}
+  - {fileID: 7110484624365164062}
+  - {fileID: 5973658813321432368}
+  - {fileID: 1430940214445640810}
+  - {fileID: 3479677084089910389}
+  - {fileID: 6739645620374719182}
+  - {fileID: 2002622432446091850}
+  - {fileID: 4157629413897079105}
+  - {fileID: 8977558706792137227}
+  - {fileID: 6826346265823647074}
+  - {fileID: 8926367211545185366}
+  - {fileID: 8947748012933777888}
+  - {fileID: 7156556218609971068}
+  - {fileID: 7032879756157389571}
+  firstVisitItemList2HideObjects: []
+  firstVisitItemList3HideObjects: []
+  secondVisitNarratorAudio1: {fileID: 8300000, guid: cf193bdf673880145a86a8ab29b85171, type: 3}
+  secondVisitNarratorAudio2: {fileID: 8300000, guid: 098a35ad86c16fb4c81090d7649f6088, type: 3}
+  secondVisitNarratorAudio3: {fileID: 8300000, guid: 5128b823a7ecd39459cfff82721163ba, type: 3}
+  secondVisitItemList1: []
+  secondVisitItemList2:
+  - {fileID: 835730025}
   secondVisitItemList3: []
-  secondVisitNextScene: ScaryForest
-  thirdVisitNarratorAudio1: {fileID: 8300000, guid: cf193bdf673880145a86a8ab29b85171, type: 3}
+  secondVisitNextScene: 
+  secondVisitNarration1RevealObjects:
+  - {fileID: 1366865102}
+  secondVisitNarration2RevealObjects: []
+  secondVisitNarration3RevealObjects: []
+  secondVisitNarration1HideObjects: []
+  secondVisitNarration2HideObjects: []
+  secondVisitNarration3HideObjects: []
+  secondVisitItemList1RevealObjects: []
+  secondVisitItemList2RevealObjects: []
+  secondVisitItemList3RevealObjects: []
+  secondVisitItemList1HideObjects: []
+  secondVisitItemList2HideObjects: []
+  secondVisitItemList3HideObjects: []
+  thirdVisitNarratorAudio1: {fileID: 0}
   thirdVisitNarratorAudio2: {fileID: 0}
   thirdVisitNarratorAudio3: {fileID: 0}
   thirdVisitItemList1: []
   thirdVisitItemList2: []
   thirdVisitItemList3: []
-  thirdVisitNextScene: FlowerForest
-  fourthVisitNarratorAudio1: {fileID: 8300000, guid: 098a35ad86c16fb4c81090d7649f6088, type: 3}
-  fourthVisitNarratorAudio2: {fileID: 8300000, guid: 5128b823a7ecd39459cfff82721163ba, type: 3}
+  thirdVisitNextScene: 
+  thirdVisitNarration1RevealObjects: []
+  thirdVisitNarration2RevealObjects: []
+  thirdVisitNarration3RevealObjects: []
+  thirdVisitNarration1HideObjects: []
+  thirdVisitNarration2HideObjects: []
+  thirdVisitNarration3HideObjects: []
+  thirdVisitItemList1RevealObjects: []
+  thirdVisitItemList2RevealObjects: []
+  thirdVisitItemList3RevealObjects: []
+  thirdVisitItemList1HideObjects: []
+  thirdVisitItemList2HideObjects: []
+  thirdVisitItemList3HideObjects: []
+  fourthVisitNarratorAudio1: {fileID: 0}
+  fourthVisitNarratorAudio2: {fileID: 0}
   fourthVisitNarratorAudio3: {fileID: 0}
-  fourthVisitItemList1:
-  - {fileID: 1583556014}
+  fourthVisitItemList1: []
   fourthVisitItemList2: []
   fourthVisitItemList3: []
   fourthVisitNextScene: 
+  fourthVisitNarration1RevealObjects: []
+  fourthVisitNarration2RevealObjects: []
+  fourthVisitNarration3RevealObjects: []
+  fourthVisitNarration1HideObjects: []
+  fourthVisitNarration2HideObjects: []
+  fourthVisitNarration3HideObjects: []
+  fourthVisitItemList1RevealObjects: []
+  fourthVisitItemList2RevealObjects: []
+  fourthVisitItemList3RevealObjects: []
+  fourthVisitItemList1HideObjects: []
+  fourthVisitItemList2HideObjects: []
+  fourthVisitItemList3HideObjects: []
   fifthVisitNarratorAudio1: {fileID: 0}
   fifthVisitNarratorAudio2: {fileID: 0}
   fifthVisitNarratorAudio3: {fileID: 0}
@@ -10520,6 +10551,18 @@ MonoBehaviour:
   fifthVisitItemList2: []
   fifthVisitItemList3: []
   fifthVisitNextScene: 
+  fifthVisitNarration1RevealObjects: []
+  fifthVisitNarration2RevealObjects: []
+  fifthVisitNarration3RevealObjects: []
+  fifthVisitNarration1HideObjects: []
+  fifthVisitNarration2HideObjects: []
+  fifthVisitNarration3HideObjects: []
+  fifthVisitItemList1RevealObjects: []
+  fifthVisitItemList2RevealObjects: []
+  fifthVisitItemList3RevealObjects: []
+  fifthVisitItemList1HideObjects: []
+  fifthVisitItemList2HideObjects: []
+  fifthVisitItemList3HideObjects: []
   sixthVisitNarratorAudio1: {fileID: 0}
   sixthVisitNarratorAudio2: {fileID: 0}
   sixthVisitNarratorAudio3: {fileID: 0}
@@ -10527,6 +10570,18 @@ MonoBehaviour:
   sixthVisitItemList2: []
   sixthVisitItemList3: []
   sixthVisitNextScene: 
+  sixthVisitNarration1RevealObjects: []
+  sixthVisitNarration2RevealObjects: []
+  sixthVisitNarration3RevealObjects: []
+  sixthVisitNarration1HideObjects: []
+  sixthVisitNarration2HideObjects: []
+  sixthVisitNarration3HideObjects: []
+  sixthVisitItemList1RevealObjects: []
+  sixthVisitItemList2RevealObjects: []
+  sixthVisitItemList3RevealObjects: []
+  sixthVisitItemList1HideObjects: []
+  sixthVisitItemList2HideObjects: []
+  sixthVisitItemList3HideObjects: []
 --- !u!4 &516985107
 Transform:
   m_ObjectHideFlags: 0
