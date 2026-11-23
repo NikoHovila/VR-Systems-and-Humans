@@ -382,6 +382,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: 2e305ba2663165a48b8f53cc176933a6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 742846507}
+    - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: 2e305ba2663165a48b8f53cc176933a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 742846508}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: 2e305ba2663165a48b8f53cc176933a6, type: 3}
 --- !u!1 &742846506 stripped
 GameObject:
@@ -409,6 +412,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 100, y: 100, z: 100}
   m_Center: {x: 0, y: 0, z: 62.59}
+--- !u!114 &742846508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742846506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5396477a5d43d548b895786b44d8863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactive
+  interactModeOverride: 0
+  twistMultiplierOverride: 0
+  dwellTimerOverride: 0
 --- !u!1 &907292807
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +843,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: 9ce1c108d0aff7c459b6e84c78f2872c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1246782907}
+    - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: 9ce1c108d0aff7c459b6e84c78f2872c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1246782908}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: 9ce1c108d0aff7c459b6e84c78f2872c, type: 3}
 --- !u!1 &1246782906 stripped
 GameObject:
@@ -852,6 +873,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.49
   m_Center: {x: 0, y: 0, z: 0.4}
+--- !u!114 &1246782908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246782906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5396477a5d43d548b895786b44d8863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactive
+  interactModeOverride: 0
+  twistMultiplierOverride: 0
+  dwellTimerOverride: 0
 --- !u!850595691 &1347003812
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1062,6 +1098,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: ab2c3767e1286b54c8a7cfb1aefd5a3a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1429181046}
+    - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: ab2c3767e1286b54c8a7cfb1aefd5a3a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1429181047}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: ab2c3767e1286b54c8a7cfb1aefd5a3a, type: 3}
 --- !u!1 &1429181045 stripped
 GameObject:
@@ -1089,6 +1128,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0.16}
+--- !u!114 &1429181047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429181045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5396477a5d43d548b895786b44d8863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactive
+  interactModeOverride: 0
+  twistMultiplierOverride: 0
+  dwellTimerOverride: 0
 --- !u!1001 &1885152154
 PrefabInstance:
   m_ObjectHideFlags: 0

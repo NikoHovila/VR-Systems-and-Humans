@@ -335,10 +335,13 @@ public class SceneManager : MonoBehaviour
             List<Interactive> stepItems = GetStepItems(configuration.ItemLists[step]);
             AudioClip narratorClip = configuration.NarratorClips[step];
 
-            if (narratorClip == null || stepItems.Count == 0)
+            if (narratorClip == null)
                 continue;
 
             yield return PlayNarratorAndWait(narratorClip);
+
+            if (stepItems.Count == 0)
+                continue;
 
             currentStepItems.Clear();
             interactedItems.Clear();
