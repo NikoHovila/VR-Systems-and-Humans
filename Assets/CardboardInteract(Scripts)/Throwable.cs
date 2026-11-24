@@ -7,8 +7,6 @@ public class Throwable : Interactive
     
     [Header("Pito-asetukset")]
     [SerializeField] float holdDistance = 3.5f; // Pallo pysyy kauempana (kokeile 3-4)
-    [SerializeField] float verticalOffset = -0.5f; // Pallo laskeutuu hieman alemmas näkökentästä
-    
     public bool useGravity = true;
     
     static Transform grabbed = null;
@@ -18,7 +16,7 @@ public class Throwable : Interactive
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        CameraInteract cameraInteractor = FindObjectOfType<CameraInteract>();
+        CameraInteract cameraInteractor = FindFirstObjectByType<CameraInteract>();
         if (cameraInteractor != null)
             cam = cameraInteractor.transform;
     }
@@ -50,7 +48,7 @@ public class Throwable : Interactive
     {
         if (cam == null)
         {
-            CameraInteract cameraInteractor = FindObjectOfType<CameraInteract>();
+            CameraInteract cameraInteractor = FindFirstObjectByType<CameraInteract>();
             if (cameraInteractor != null)
                 cam = cameraInteractor.transform;
         }

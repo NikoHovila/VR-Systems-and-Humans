@@ -31,7 +31,7 @@ public class Grabbable : Interactive
         rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
 
-        CameraInteract cameraInteractor = FindObjectOfType<CameraInteract>();
+        CameraInteract cameraInteractor = FindFirstObjectByType<CameraInteract>();
         if (cameraInteractor != null)
             cam = cameraInteractor.transform;
 
@@ -85,7 +85,7 @@ public class Grabbable : Interactive
     {
         if (cam == null)
         {
-            CameraInteract cameraInteractor = FindObjectOfType<CameraInteract>();
+            CameraInteract cameraInteractor = FindFirstObjectByType<CameraInteract>();
             if (cameraInteractor != null)
                 cam = cameraInteractor.transform;
         }
