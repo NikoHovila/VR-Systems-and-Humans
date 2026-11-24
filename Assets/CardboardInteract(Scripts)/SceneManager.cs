@@ -8,7 +8,7 @@ using UnitySceneManager = UnityEngine.SceneManagement.SceneManager;
 
 public class SceneManager : MonoBehaviour
 {
-    private const int MaximumVisits = 6;
+    private const int MaximumVisits = 4;
     private const int MaximumItemsPerStep = 5;
     private const string VisitCountPrefix = "SceneVisitCountByPath_v2_";
     private const string SceneNameSuffix = "_SceneName";
@@ -21,8 +21,6 @@ public class SceneManager : MonoBehaviour
     public List<GameObject> secondVisitHideObjects = new List<GameObject>();
     public List<GameObject> thirdVisitHideObjects = new List<GameObject>();
     public List<GameObject> fourthVisitHideObjects = new List<GameObject>();
-    public List<GameObject> fifthVisitHideObjects = new List<GameObject>();
-    public List<GameObject> sixthVisitHideObjects = new List<GameObject>();
 
     [Header("First Visit - Narrator audio")]
     public AudioClip narratorAudio1;
@@ -47,6 +45,16 @@ public class SceneManager : MonoBehaviour
     public List<GameObject> firstVisitNarration2HideObjects = new List<GameObject>();
     public List<GameObject> firstVisitNarration3HideObjects = new List<GameObject>();
 
+    [Header("First Visit - Objects revealed after item lists")]
+    public List<GameObject> firstVisitItemList1RevealObjects = new List<GameObject>();
+    public List<GameObject> firstVisitItemList2RevealObjects = new List<GameObject>();
+    public List<GameObject> firstVisitItemList3RevealObjects = new List<GameObject>();
+
+    [Header("First Visit - Objects hidden after item lists")]
+    public List<GameObject> firstVisitItemList1HideObjects = new List<GameObject>();
+    public List<GameObject> firstVisitItemList2HideObjects = new List<GameObject>();
+    public List<GameObject> firstVisitItemList3HideObjects = new List<GameObject>();
+
     [Header("Second Visit - Narrator audio")]
     public AudioClip secondVisitNarratorAudio1;
     public AudioClip secondVisitNarratorAudio2;
@@ -69,6 +77,16 @@ public class SceneManager : MonoBehaviour
     public List<GameObject> secondVisitNarration1HideObjects = new List<GameObject>();
     public List<GameObject> secondVisitNarration2HideObjects = new List<GameObject>();
     public List<GameObject> secondVisitNarration3HideObjects = new List<GameObject>();
+
+    [Header("Second Visit - Objects revealed after item lists")]
+    public List<GameObject> secondVisitItemList1RevealObjects = new List<GameObject>();
+    public List<GameObject> secondVisitItemList2RevealObjects = new List<GameObject>();
+    public List<GameObject> secondVisitItemList3RevealObjects = new List<GameObject>();
+
+    [Header("Second Visit - Objects hidden after item lists")]
+    public List<GameObject> secondVisitItemList1HideObjects = new List<GameObject>();
+    public List<GameObject> secondVisitItemList2HideObjects = new List<GameObject>();
+    public List<GameObject> secondVisitItemList3HideObjects = new List<GameObject>();
 
     [Header("Third Visit - Narrator audio")]
     public AudioClip thirdVisitNarratorAudio1;
@@ -93,6 +111,16 @@ public class SceneManager : MonoBehaviour
     public List<GameObject> thirdVisitNarration2HideObjects = new List<GameObject>();
     public List<GameObject> thirdVisitNarration3HideObjects = new List<GameObject>();
 
+    [Header("Third Visit - Objects revealed after item lists")]
+    public List<GameObject> thirdVisitItemList1RevealObjects = new List<GameObject>();
+    public List<GameObject> thirdVisitItemList2RevealObjects = new List<GameObject>();
+    public List<GameObject> thirdVisitItemList3RevealObjects = new List<GameObject>();
+
+    [Header("Third Visit - Objects hidden after item lists")]
+    public List<GameObject> thirdVisitItemList1HideObjects = new List<GameObject>();
+    public List<GameObject> thirdVisitItemList2HideObjects = new List<GameObject>();
+    public List<GameObject> thirdVisitItemList3HideObjects = new List<GameObject>();
+
     [Header("Fourth Visit - Narrator audio")]
     public AudioClip fourthVisitNarratorAudio1;
     public AudioClip fourthVisitNarratorAudio2;
@@ -116,51 +144,15 @@ public class SceneManager : MonoBehaviour
     public List<GameObject> fourthVisitNarration2HideObjects = new List<GameObject>();
     public List<GameObject> fourthVisitNarration3HideObjects = new List<GameObject>();
 
-    [Header("Fifth Visit - Narrator audio")]
-    public AudioClip fifthVisitNarratorAudio1;
-    public AudioClip fifthVisitNarratorAudio2;
-    public AudioClip fifthVisitNarratorAudio3;
+    [Header("Fourth Visit - Objects revealed after item lists")]
+    public List<GameObject> fourthVisitItemList1RevealObjects = new List<GameObject>();
+    public List<GameObject> fourthVisitItemList2RevealObjects = new List<GameObject>();
+    public List<GameObject> fourthVisitItemList3RevealObjects = new List<GameObject>();
 
-    [Header("Fifth Visit - Item lists")]
-    public List<GameObject> fifthVisitItemList1 = new List<GameObject>();
-    public List<GameObject> fifthVisitItemList2 = new List<GameObject>();
-    public List<GameObject> fifthVisitItemList3 = new List<GameObject>();
-
-    [Header("Fifth Visit - Scene transition")]
-    [SerializeField] private string fifthVisitNextScene;
-
-    [Header("Fifth Visit - Objects revealed after narration")]
-    public List<GameObject> fifthVisitNarration1RevealObjects = new List<GameObject>();
-    public List<GameObject> fifthVisitNarration2RevealObjects = new List<GameObject>();
-    public List<GameObject> fifthVisitNarration3RevealObjects = new List<GameObject>();
-
-    [Header("Fifth Visit - Objects hidden after narration")]
-    public List<GameObject> fifthVisitNarration1HideObjects = new List<GameObject>();
-    public List<GameObject> fifthVisitNarration2HideObjects = new List<GameObject>();
-    public List<GameObject> fifthVisitNarration3HideObjects = new List<GameObject>();
-
-    [Header("Sixth Visit - Narrator audio")]
-    public AudioClip sixthVisitNarratorAudio1;
-    public AudioClip sixthVisitNarratorAudio2;
-    public AudioClip sixthVisitNarratorAudio3;
-
-    [Header("Sixth Visit - Item lists")]
-    public List<GameObject> sixthVisitItemList1 = new List<GameObject>();
-    public List<GameObject> sixthVisitItemList2 = new List<GameObject>();
-    public List<GameObject> sixthVisitItemList3 = new List<GameObject>();
-
-    [Header("Sixth Visit - Scene transition")]
-    [SerializeField] private string sixthVisitNextScene;
-
-    [Header("Sixth Visit - Objects revealed after narration")]
-    public List<GameObject> sixthVisitNarration1RevealObjects = new List<GameObject>();
-    public List<GameObject> sixthVisitNarration2RevealObjects = new List<GameObject>();
-    public List<GameObject> sixthVisitNarration3RevealObjects = new List<GameObject>();
-
-    [Header("Sixth Visit - Objects hidden after narration")]
-    public List<GameObject> sixthVisitNarration1HideObjects = new List<GameObject>();
-    public List<GameObject> sixthVisitNarration2HideObjects = new List<GameObject>();
-    public List<GameObject> sixthVisitNarration3HideObjects = new List<GameObject>();
+    [Header("Fourth Visit - Objects hidden after item lists")]
+    public List<GameObject> fourthVisitItemList1HideObjects = new List<GameObject>();
+    public List<GameObject> fourthVisitItemList2HideObjects = new List<GameObject>();
+    public List<GameObject> fourthVisitItemList3HideObjects = new List<GameObject>();
 
     private readonly HashSet<Interactive> trackedItems = new HashSet<Interactive>();
     private readonly HashSet<Interactive> currentStepItems = new HashSet<Interactive>();
@@ -285,42 +277,45 @@ public class SceneManager : MonoBehaviour
                     new[] { itemList1, itemList2, itemList3 },
                     nextScene,
                     new[] { firstVisitNarration1RevealObjects, firstVisitNarration2RevealObjects, firstVisitNarration3RevealObjects },
-                    new[] { firstVisitNarration1HideObjects, firstVisitNarration2HideObjects, firstVisitNarration3HideObjects });
+                    new[] { firstVisitNarration1HideObjects, firstVisitNarration2HideObjects, firstVisitNarration3HideObjects },
+                    new[] { firstVisitItemList1RevealObjects, firstVisitItemList2RevealObjects, firstVisitItemList3RevealObjects },
+                    new[] { firstVisitItemList1HideObjects, firstVisitItemList2HideObjects, firstVisitItemList3HideObjects });
             case 2:
                 return new VisitConfiguration(
                     new[] { secondVisitNarratorAudio1, secondVisitNarratorAudio2, secondVisitNarratorAudio3 },
                     new[] { secondVisitItemList1, secondVisitItemList2, secondVisitItemList3 },
                     secondVisitNextScene,
                     new[] { secondVisitNarration1RevealObjects, secondVisitNarration2RevealObjects, secondVisitNarration3RevealObjects },
-                    new[] { secondVisitNarration1HideObjects, secondVisitNarration2HideObjects, secondVisitNarration3HideObjects });
+                    new[] { secondVisitNarration1HideObjects, secondVisitNarration2HideObjects, secondVisitNarration3HideObjects },
+                    new[] { secondVisitItemList1RevealObjects, secondVisitItemList2RevealObjects, secondVisitItemList3RevealObjects },
+                    new[] { secondVisitItemList1HideObjects, secondVisitItemList2HideObjects, secondVisitItemList3HideObjects });
             case 3:
                 return new VisitConfiguration(
                     new[] { thirdVisitNarratorAudio1, thirdVisitNarratorAudio2, thirdVisitNarratorAudio3 },
                     new[] { thirdVisitItemList1, thirdVisitItemList2, thirdVisitItemList3 },
                     thirdVisitNextScene,
                     new[] { thirdVisitNarration1RevealObjects, thirdVisitNarration2RevealObjects, thirdVisitNarration3RevealObjects },
-                    new[] { thirdVisitNarration1HideObjects, thirdVisitNarration2HideObjects, thirdVisitNarration3HideObjects });
+                    new[] { thirdVisitNarration1HideObjects, thirdVisitNarration2HideObjects, thirdVisitNarration3HideObjects },
+                    new[] { thirdVisitItemList1RevealObjects, thirdVisitItemList2RevealObjects, thirdVisitItemList3RevealObjects },
+                    new[] { thirdVisitItemList1HideObjects, thirdVisitItemList2HideObjects, thirdVisitItemList3HideObjects });
             case 4:
                 return new VisitConfiguration(
                     new[] { fourthVisitNarratorAudio1, fourthVisitNarratorAudio2, fourthVisitNarratorAudio3 },
                     new[] { fourthVisitItemList1, fourthVisitItemList2, fourthVisitItemList3 },
                     fourthVisitNextScene,
                     new[] { fourthVisitNarration1RevealObjects, fourthVisitNarration2RevealObjects, fourthVisitNarration3RevealObjects },
-                    new[] { fourthVisitNarration1HideObjects, fourthVisitNarration2HideObjects, fourthVisitNarration3HideObjects });
-            case 5:
-                return new VisitConfiguration(
-                    new[] { fifthVisitNarratorAudio1, fifthVisitNarratorAudio2, fifthVisitNarratorAudio3 },
-                    new[] { fifthVisitItemList1, fifthVisitItemList2, fifthVisitItemList3 },
-                    fifthVisitNextScene,
-                    new[] { fifthVisitNarration1RevealObjects, fifthVisitNarration2RevealObjects, fifthVisitNarration3RevealObjects },
-                    new[] { fifthVisitNarration1HideObjects, fifthVisitNarration2HideObjects, fifthVisitNarration3HideObjects });
+                    new[] { fourthVisitNarration1HideObjects, fourthVisitNarration2HideObjects, fourthVisitNarration3HideObjects },
+                    new[] { fourthVisitItemList1RevealObjects, fourthVisitItemList2RevealObjects, fourthVisitItemList3RevealObjects },
+                    new[] { fourthVisitItemList1HideObjects, fourthVisitItemList2HideObjects, fourthVisitItemList3HideObjects });
             default:
                 return new VisitConfiguration(
-                    new[] { sixthVisitNarratorAudio1, sixthVisitNarratorAudio2, sixthVisitNarratorAudio3 },
-                    new[] { sixthVisitItemList1, sixthVisitItemList2, sixthVisitItemList3 },
-                    sixthVisitNextScene,
-                    new[] { sixthVisitNarration1RevealObjects, sixthVisitNarration2RevealObjects, sixthVisitNarration3RevealObjects },
-                    new[] { sixthVisitNarration1HideObjects, sixthVisitNarration2HideObjects, sixthVisitNarration3HideObjects });
+                    new[] { fourthVisitNarratorAudio1, fourthVisitNarratorAudio2, fourthVisitNarratorAudio3 },
+                    new[] { fourthVisitItemList1, fourthVisitItemList2, fourthVisitItemList3 },
+                    fourthVisitNextScene,
+                    new[] { fourthVisitNarration1RevealObjects, fourthVisitNarration2RevealObjects, fourthVisitNarration3RevealObjects },
+                    new[] { fourthVisitNarration1HideObjects, fourthVisitNarration2HideObjects, fourthVisitNarration3HideObjects },
+                    new[] { fourthVisitItemList1RevealObjects, fourthVisitItemList2RevealObjects, fourthVisitItemList3RevealObjects },
+                    new[] { fourthVisitItemList1HideObjects, fourthVisitItemList2HideObjects, fourthVisitItemList3HideObjects });
         }
     }
 
@@ -359,8 +354,6 @@ public class SceneManager : MonoBehaviour
             secondVisitItemList1, secondVisitItemList2, secondVisitItemList3,
             thirdVisitItemList1, thirdVisitItemList2, thirdVisitItemList3,
             fourthVisitItemList1, fourthVisitItemList2, fourthVisitItemList3,
-            fifthVisitItemList1, fifthVisitItemList2, fifthVisitItemList3,
-            sixthVisitItemList1, sixthVisitItemList2, sixthVisitItemList3
         };
     }
 
@@ -382,12 +375,6 @@ public class SceneManager : MonoBehaviour
             case 4:
                 objectsToHide = fourthVisitHideObjects;
                 break;
-            case 5:
-                objectsToHide = fifthVisitHideObjects;
-                break;
-            case 6:
-                objectsToHide = sixthVisitHideObjects;
-                break;
         }
 
         if (objectsToHide != null)
@@ -400,6 +387,18 @@ public class SceneManager : MonoBehaviour
         }
 
         foreach (List<GameObject> stepObjects in GetVisitConfiguration(visitNumber).ObjectsToReveal)
+        {
+            if (stepObjects == null)
+                continue;
+
+            foreach (GameObject gameObject in stepObjects)
+            {
+                if (gameObject != null)
+                    gameObject.SetActive(false);
+            }
+        }
+
+        foreach (List<GameObject> stepObjects in GetVisitConfiguration(visitNumber).ObjectsToRevealAfterItemLists)
         {
             if (stepObjects == null)
                 continue;
@@ -424,31 +423,34 @@ public class SceneManager : MonoBehaviour
             RevealObjects(configuration.ObjectsToReveal[step]);
             HideObjects(configuration.ObjectsToHide[step]);
 
-            if (narratorClip == null)
-                continue;
-
-            List<Interactive> stepItems = GetStepItems(configuration.ItemLists[step]);
-            if (stepItems.Count == 0)
-                continue;
-
-            currentStepItems.Clear();
-            interactedItems.Clear();
-
-            foreach (Interactive item in stepItems)
+            if (narratorClip != null)
             {
-                currentStepItems.Add(item);
-                item.SetInteractable(true);
+                List<Interactive> stepItems = GetStepItems(configuration.ItemLists[step]);
+                if (stepItems.Count > 0)
+                {
+                    currentStepItems.Clear();
+                    interactedItems.Clear();
+
+                    foreach (Interactive item in stepItems)
+                    {
+                        currentStepItems.Add(item);
+                        item.SetInteractable(true);
+                    }
+
+                    int requiredInteractions = Mathf.Min(stepItems.Count, MaximumItemsPerStep);
+                    while (interactedItems.Count < requiredInteractions)
+                        yield return null;
+
+                    foreach (Interactive item in stepItems)
+                        item.SetInteractable(false);
+
+                    currentStepItems.Clear();
+                    interactedItems.Clear();
+                }
             }
 
-            int requiredInteractions = Mathf.Min(stepItems.Count, MaximumItemsPerStep);
-            while (interactedItems.Count < requiredInteractions)
-                yield return null;
-
-            foreach (Interactive item in stepItems)
-                item.SetInteractable(false);
-
-            currentStepItems.Clear();
-            interactedItems.Clear();
+            RevealObjects(configuration.ObjectsToRevealAfterItemLists[step]);
+            HideObjects(configuration.ObjectsToHideAfterItemLists[step]);
         }
 
         LoadNextScene(configuration.NextScene);
@@ -549,19 +551,25 @@ public class SceneManager : MonoBehaviour
         public readonly string NextScene;
         public readonly List<GameObject>[] ObjectsToReveal;
         public readonly List<GameObject>[] ObjectsToHide;
+        public readonly List<GameObject>[] ObjectsToRevealAfterItemLists;
+        public readonly List<GameObject>[] ObjectsToHideAfterItemLists;
 
         public VisitConfiguration(
             AudioClip[] narratorClips,
             List<GameObject>[] itemLists,
             string nextScene,
             List<GameObject>[] objectsToReveal,
-            List<GameObject>[] objectsToHide)
+            List<GameObject>[] objectsToHide,
+            List<GameObject>[] objectsToRevealAfterItemLists,
+            List<GameObject>[] objectsToHideAfterItemLists)
         {
             NarratorClips = narratorClips;
             ItemLists = itemLists;
             NextScene = nextScene;
             ObjectsToReveal = objectsToReveal;
             ObjectsToHide = objectsToHide;
+            ObjectsToRevealAfterItemLists = objectsToRevealAfterItemLists;
+            ObjectsToHideAfterItemLists = objectsToHideAfterItemLists;
         }
     }
 }

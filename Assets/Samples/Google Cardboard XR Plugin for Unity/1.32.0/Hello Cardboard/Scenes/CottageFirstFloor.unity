@@ -377,58 +377,42 @@ MonoBehaviour:
   - {fileID: 1220132527}
   - {fileID: 635657430}
   - {fileID: 5048893674075878051}
+  - {fileID: 936761773}
   secondVisitHideObjects:
-  - {fileID: 656448478}
-  - {fileID: 1220132527}
   - {fileID: 2375328511961862986}
   - {fileID: 1864502660}
   - {fileID: 1754061852}
-  - {fileID: 1491076900}
-  - {fileID: 635657430}
   - {fileID: 396234899}
-  - {fileID: 5048893674075878051}
+  - {fileID: 1491076900}
   - {fileID: 949571686}
+  - {fileID: 656448478}
+  - {fileID: 1220132527}
+  - {fileID: 635657430}
+  - {fileID: 5048893674075878051}
+  - {fileID: 936761773}
   thirdVisitHideObjects:
-  - {fileID: 656448478}
-  - {fileID: 1220132527}
-  - {fileID: 635657430}
   - {fileID: 2375328511961862986}
   - {fileID: 1864502660}
   - {fileID: 1754061852}
   - {fileID: 396234899}
   - {fileID: 1491076900}
   - {fileID: 949571686}
+  - {fileID: 656448478}
   - {fileID: 5048893674075878051}
+  - {fileID: 936761773}
   fourthVisitHideObjects:
-  - {fileID: 656448478}
-  - {fileID: 2375328511961862986}
-  - {fileID: 1864502660}
-  - {fileID: 1754061852}
-  - {fileID: 396234899}
-  - {fileID: 1491076900}
-  - {fileID: 949571686}
-  - {fileID: 5048893674075878051}
-  fifthVisitHideObjects:
-  - {fileID: 656448478}
-  - {fileID: 2375328511961862986}
-  - {fileID: 1864502660}
-  - {fileID: 1754061852}
-  - {fileID: 396234899}
-  - {fileID: 1491076900}
-  - {fileID: 949571686}
-  - {fileID: 635657430}
-  sixthVisitHideObjects:
   - {fileID: 1220132527}
   - {fileID: 635657430}
+  - {fileID: 5048893674075878051}
   - {fileID: 2375328511961862986}
   - {fileID: 1864502660}
   - {fileID: 1754061852}
   - {fileID: 396234899}
   - {fileID: 1491076900}
   - {fileID: 949571686}
-  - {fileID: 5048893674075878051}
+  - {fileID: 936761773}
   narratorAudio1: {fileID: 8300000, guid: 2e2fbdaa5b49dc14791880c7567ff7a4, type: 3}
-  narratorAudio2: {fileID: 0}
+  narratorAudio2: {fileID: 8300000, guid: b3ee07a6244d76e4da3744d2320c53bc, type: 3}
   narratorAudio3: {fileID: 0}
   itemList1:
   - {fileID: 2375328511961862986}
@@ -437,10 +421,29 @@ MonoBehaviour:
   - {fileID: 396234899}
   - {fileID: 1491076900}
   - {fileID: 949571686}
-  itemList2: []
+  itemList2:
+  - {fileID: 1867724512}
   itemList3: []
-  nextScene: CottageFirstFloor
-  secondVisitNarratorAudio1: {fileID: 8300000, guid: b3ee07a6244d76e4da3744d2320c53bc, type: 3}
+  nextScene: CottageSecondFloor
+  firstVisitNarration1RevealObjects: []
+  firstVisitNarration2RevealObjects: []
+  firstVisitNarration3RevealObjects: []
+  firstVisitNarration1HideObjects: []
+  firstVisitNarration2HideObjects: []
+  firstVisitNarration3HideObjects: []
+  firstVisitItemList1RevealObjects: []
+  firstVisitItemList2RevealObjects: []
+  firstVisitItemList3RevealObjects: []
+  firstVisitItemList1HideObjects:
+  - {fileID: 2375328511961862986}
+  - {fileID: 1864502660}
+  - {fileID: 1754061852}
+  - {fileID: 396234899}
+  - {fileID: 1491076900}
+  - {fileID: 949571686}
+  firstVisitItemList2HideObjects: []
+  firstVisitItemList3HideObjects: []
+  secondVisitNarratorAudio1: {fileID: 8300000, guid: 98fca8c847f34cf449eab49e1088bafb, type: 3}
   secondVisitNarratorAudio2: {fileID: 0}
   secondVisitNarratorAudio3: {fileID: 0}
   secondVisitItemList1:
@@ -448,38 +451,66 @@ MonoBehaviour:
   secondVisitItemList2: []
   secondVisitItemList3: []
   secondVisitNextScene: CottageSecondFloor
-  thirdVisitNarratorAudio1: {fileID: 8300000, guid: 98fca8c847f34cf449eab49e1088bafb, type: 3}
-  thirdVisitNarratorAudio2: {fileID: 0}
-  thirdVisitNarratorAudio3: {fileID: 0}
+  secondVisitNarration1RevealObjects: []
+  secondVisitNarration2RevealObjects: []
+  secondVisitNarration3RevealObjects: []
+  secondVisitNarration1HideObjects: []
+  secondVisitNarration2HideObjects: []
+  secondVisitNarration3HideObjects: []
+  secondVisitItemList1RevealObjects: []
+  secondVisitItemList2RevealObjects: []
+  secondVisitItemList3RevealObjects: []
+  secondVisitItemList1HideObjects: []
+  secondVisitItemList2HideObjects: []
+  secondVisitItemList3HideObjects: []
+  thirdVisitNarratorAudio1: {fileID: 8300000, guid: 909c28ddbd9eb8c4b86a81b359c1098e, type: 3}
+  thirdVisitNarratorAudio2: {fileID: 8300000, guid: f3ae4e2b00077d54ea686f62cf92d4b0, type: 3}
+  thirdVisitNarratorAudio3: {fileID: 8300000, guid: bdbf91c71e2bebb478d1f962b9b8cec6, type: 3}
   thirdVisitItemList1:
-  - {fileID: 1867724512}
-  thirdVisitItemList2: []
+  - {fileID: 635657430}
+  thirdVisitItemList2:
+  - {fileID: 930538542}
   thirdVisitItemList3: []
-  thirdVisitNextScene: CottageSecondFloor
-  fourthVisitNarratorAudio1: {fileID: 8300000, guid: 909c28ddbd9eb8c4b86a81b359c1098e, type: 3}
-  fourthVisitNarratorAudio2: {fileID: 0}
+  thirdVisitNextScene: CottageOutside
+  thirdVisitNarration1RevealObjects: []
+  thirdVisitNarration2RevealObjects: []
+  thirdVisitNarration3RevealObjects: []
+  thirdVisitNarration1HideObjects: []
+  thirdVisitNarration2HideObjects: []
+  thirdVisitNarration3HideObjects: []
+  thirdVisitItemList1RevealObjects:
+  - {fileID: 5048893674075878051}
+  - {fileID: 936761773}
+  thirdVisitItemList2RevealObjects:
+  - {fileID: 656448478}
+  thirdVisitItemList3RevealObjects: []
+  thirdVisitItemList1HideObjects:
+  - {fileID: 635657430}
+  - {fileID: 1220132527}
+  thirdVisitItemList2HideObjects:
+  - {fileID: 936761773}
+  thirdVisitItemList3HideObjects: []
+  fourthVisitNarratorAudio1: {fileID: 8300000, guid: f5056b2a000660949a26c4156f42908f, type: 3}
+  fourthVisitNarratorAudio2: {fileID: 8300000, guid: fd3606554ffacf44ea4369b78b881f2b, type: 3}
   fourthVisitNarratorAudio3: {fileID: 0}
   fourthVisitItemList1:
-  - {fileID: 635657430}
-  fourthVisitItemList2: []
-  fourthVisitItemList3: []
-  fourthVisitNextScene: CottageFirstFloor
-  fifthVisitNarratorAudio1: {fileID: 8300000, guid: f3ae4e2b00077d54ea686f62cf92d4b0, type: 3}
-  fifthVisitNarratorAudio2: {fileID: 8300000, guid: bdbf91c71e2bebb478d1f962b9b8cec6, type: 3}
-  fifthVisitNarratorAudio3: {fileID: 0}
-  fifthVisitItemList1:
-  - {fileID: 930538542}
-  fifthVisitItemList2: []
-  fifthVisitItemList3: []
-  fifthVisitNextScene: CottageOutside
-  sixthVisitNarratorAudio1: {fileID: 8300000, guid: f5056b2a000660949a26c4156f42908f, type: 3}
-  sixthVisitNarratorAudio2: {fileID: 8300000, guid: fd3606554ffacf44ea4369b78b881f2b, type: 3}
-  sixthVisitNarratorAudio3: {fileID: 0}
-  sixthVisitItemList1:
   - {fileID: 656448478}
-  sixthVisitItemList2: []
-  sixthVisitItemList3: []
-  sixthVisitNextScene: FlowerForest
+  fourthVisitItemList2:
+  - {fileID: 824513591}
+  fourthVisitItemList3: []
+  fourthVisitNextScene: FlowerForest
+  fourthVisitNarration1RevealObjects: []
+  fourthVisitNarration2RevealObjects: []
+  fourthVisitNarration3RevealObjects: []
+  fourthVisitNarration1HideObjects: []
+  fourthVisitNarration2HideObjects: []
+  fourthVisitNarration3HideObjects: []
+  fourthVisitItemList1RevealObjects: []
+  fourthVisitItemList2RevealObjects: []
+  fourthVisitItemList3RevealObjects: []
+  fourthVisitItemList1HideObjects: []
+  fourthVisitItemList2HideObjects: []
+  fourthVisitItemList3HideObjects: []
 --- !u!4 &516985107
 Transform:
   m_ObjectHideFlags: 0
@@ -629,7 +660,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6689036041284674117, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
       propertyPath: m_Name
-      value: snow_white
+      value: snow_white(DEAD)
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
       propertyPath: m_LocalScale.x
@@ -1283,6 +1314,80 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2.01
   m_Center: {x: 0, y: 0, z: 0.74}
+--- !u!1001 &936761772
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -6689036041284674117, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      propertyPath: m_Name
+      value: snow_white (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.115
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5424677
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5424677
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.45357338
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.45357338
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 79.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: -5645937942226959685, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+--- !u!1 &936761773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6689036041284674117, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+  m_PrefabInstance: {fileID: 936761772}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &949571686
 GameObject:
   m_ObjectHideFlags: 0
@@ -3097,6 +3202,7 @@ SceneRoots:
   - {fileID: 824513596}
   - {fileID: 656448477}
   - {fileID: 1220132526}
+  - {fileID: 936761772}
   - {fileID: 681653924}
   - {fileID: 635657429}
   - {fileID: 4880355629873101032}
