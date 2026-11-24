@@ -146,6 +146,7 @@ PlayerSettings:
   bundleVersion: 1
   preloadedAssets:
   - {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
+  - {fileID: 8010448015157508324, guid: ea038ade32a58e342b1bd92ac25e0560, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -167,6 +168,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
+    Android: com.Kaksiot_Oulu_37__m2.Storybook_VR
     Standalone: com.DefaultCompany.3D-Project
   buildNumber:
     Standalone: 0

@@ -71,7 +71,7 @@ public class BasketWeightChecker : MonoBehaviour
 
     public static void ReloadActiveSceneKeepingProgress()
     {
-        BasketWeightChecker checker = FindObjectOfType<BasketWeightChecker>();
+        BasketWeightChecker checker = FindFirstObjectByType<BasketWeightChecker>();
         pendingRoundsCompleted = checker != null ? checker.roundsCompleted : 0;
 
         Scene activeScene = UnitySceneManager.GetActiveScene();
@@ -301,7 +301,7 @@ public class BasketWeightChecker : MonoBehaviour
 
     void ResetAllBalls()
     {
-        Ball[] balls = FindObjectsOfType<Ball>();
+        Ball[] balls = FindObjectsByType<Ball>(FindObjectsSortMode.None);
 
         foreach (Ball ball in balls)
         {
