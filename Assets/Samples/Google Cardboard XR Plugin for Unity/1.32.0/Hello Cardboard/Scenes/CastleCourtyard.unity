@@ -249,8 +249,6 @@ MonoBehaviour:
   secondVisitHideObjects: []
   thirdVisitHideObjects: []
   fourthVisitHideObjects: []
-  fifthVisitHideObjects: []
-  sixthVisitHideObjects: []
   narratorAudio1: {fileID: 8300000, guid: 46158528e7349c842aa026145b8eb0bb, type: 3}
   narratorAudio2: {fileID: 8300000, guid: c35738351c693554f9494337deabef0d, type: 3}
   narratorAudio3: {fileID: 0}
@@ -259,6 +257,18 @@ MonoBehaviour:
   itemList2: []
   itemList3: []
   nextScene: MagicMirrorScene
+  firstVisitNarration1RevealObjects: []
+  firstVisitNarration2RevealObjects: []
+  firstVisitNarration3RevealObjects: []
+  firstVisitNarration1HideObjects: []
+  firstVisitNarration2HideObjects: []
+  firstVisitNarration3HideObjects: []
+  firstVisitItemList1RevealObjects: []
+  firstVisitItemList2RevealObjects: []
+  firstVisitItemList3RevealObjects: []
+  firstVisitItemList1HideObjects: []
+  firstVisitItemList2HideObjects: []
+  firstVisitItemList3HideObjects: []
   secondVisitNarratorAudio1: {fileID: 0}
   secondVisitNarratorAudio2: {fileID: 0}
   secondVisitNarratorAudio3: {fileID: 0}
@@ -266,6 +276,18 @@ MonoBehaviour:
   secondVisitItemList2: []
   secondVisitItemList3: []
   secondVisitNextScene: 
+  secondVisitNarration1RevealObjects: []
+  secondVisitNarration2RevealObjects: []
+  secondVisitNarration3RevealObjects: []
+  secondVisitNarration1HideObjects: []
+  secondVisitNarration2HideObjects: []
+  secondVisitNarration3HideObjects: []
+  secondVisitItemList1RevealObjects: []
+  secondVisitItemList2RevealObjects: []
+  secondVisitItemList3RevealObjects: []
+  secondVisitItemList1HideObjects: []
+  secondVisitItemList2HideObjects: []
+  secondVisitItemList3HideObjects: []
   thirdVisitNarratorAudio1: {fileID: 0}
   thirdVisitNarratorAudio2: {fileID: 0}
   thirdVisitNarratorAudio3: {fileID: 0}
@@ -273,6 +295,18 @@ MonoBehaviour:
   thirdVisitItemList2: []
   thirdVisitItemList3: []
   thirdVisitNextScene: 
+  thirdVisitNarration1RevealObjects: []
+  thirdVisitNarration2RevealObjects: []
+  thirdVisitNarration3RevealObjects: []
+  thirdVisitNarration1HideObjects: []
+  thirdVisitNarration2HideObjects: []
+  thirdVisitNarration3HideObjects: []
+  thirdVisitItemList1RevealObjects: []
+  thirdVisitItemList2RevealObjects: []
+  thirdVisitItemList3RevealObjects: []
+  thirdVisitItemList1HideObjects: []
+  thirdVisitItemList2HideObjects: []
+  thirdVisitItemList3HideObjects: []
   fourthVisitNarratorAudio1: {fileID: 0}
   fourthVisitNarratorAudio2: {fileID: 0}
   fourthVisitNarratorAudio3: {fileID: 0}
@@ -280,20 +314,18 @@ MonoBehaviour:
   fourthVisitItemList2: []
   fourthVisitItemList3: []
   fourthVisitNextScene: 
-  fifthVisitNarratorAudio1: {fileID: 0}
-  fifthVisitNarratorAudio2: {fileID: 0}
-  fifthVisitNarratorAudio3: {fileID: 0}
-  fifthVisitItemList1: []
-  fifthVisitItemList2: []
-  fifthVisitItemList3: []
-  fifthVisitNextScene: 
-  sixthVisitNarratorAudio1: {fileID: 0}
-  sixthVisitNarratorAudio2: {fileID: 0}
-  sixthVisitNarratorAudio3: {fileID: 0}
-  sixthVisitItemList1: []
-  sixthVisitItemList2: []
-  sixthVisitItemList3: []
-  sixthVisitNextScene: 
+  fourthVisitNarration1RevealObjects: []
+  fourthVisitNarration2RevealObjects: []
+  fourthVisitNarration3RevealObjects: []
+  fourthVisitNarration1HideObjects: []
+  fourthVisitNarration2HideObjects: []
+  fourthVisitNarration3HideObjects: []
+  fourthVisitItemList1RevealObjects: []
+  fourthVisitItemList2RevealObjects: []
+  fourthVisitItemList3RevealObjects: []
+  fourthVisitItemList1HideObjects: []
+  fourthVisitItemList2HideObjects: []
+  fourthVisitItemList3HideObjects: []
 --- !u!4 &516985107
 Transform:
   m_ObjectHideFlags: 0
