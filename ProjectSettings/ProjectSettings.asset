@@ -168,6 +168,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
+    Android: com.Kaksiot_Oulu_37__m2.Storybook_VR
     Standalone: com.DefaultCompany.3D-Project
   buildNumber:
     Standalone: 0
