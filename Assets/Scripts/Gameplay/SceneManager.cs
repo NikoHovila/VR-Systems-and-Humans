@@ -10,6 +10,7 @@ public class SceneManager : MonoBehaviour
 {
     private const int MaximumVisits = 4;
     private const int MaximumItemsPerStep = 5;
+    private const float QuestMarkerDelaySeconds = 10f;
     private const string VisitCountPrefix = "SceneVisitCountByPath_v2_";
     private const string SceneNameSuffix = "_SceneName";
     private const string ScenePathSuffix = "_ScenePath";
@@ -36,6 +37,11 @@ public class SceneManager : MonoBehaviour
     public List<GameObject> itemList1 = new List<GameObject>();
     public List<GameObject> itemList2 = new List<GameObject>();
     public List<GameObject> itemList3 = new List<GameObject>();
+
+    [Header("First Visit - Optional quest markers")]
+    [SerializeField] private QuestMarkerSetting firstVisitItemList1Quest = new QuestMarkerSetting();
+    [SerializeField] private QuestMarkerSetting firstVisitItemList2Quest = new QuestMarkerSetting();
+    [SerializeField] private QuestMarkerSetting firstVisitItemList3Quest = new QuestMarkerSetting();
 
     [Header("First Visit - Scene transition")]
     [SerializeField] private string nextScene;
@@ -75,6 +81,11 @@ public class SceneManager : MonoBehaviour
     public List<GameObject> secondVisitItemList2 = new List<GameObject>();
     public List<GameObject> secondVisitItemList3 = new List<GameObject>();
 
+    [Header("Second Visit - Optional quest markers")]
+    [SerializeField] private QuestMarkerSetting secondVisitItemList1Quest = new QuestMarkerSetting();
+    [SerializeField] private QuestMarkerSetting secondVisitItemList2Quest = new QuestMarkerSetting();
+    [SerializeField] private QuestMarkerSetting secondVisitItemList3Quest = new QuestMarkerSetting();
+
     [Header("Second Visit - Scene transition")]
     [SerializeField] private string secondVisitNextScene;
 
@@ -113,6 +124,11 @@ public class SceneManager : MonoBehaviour
     public List<GameObject> thirdVisitItemList2 = new List<GameObject>();
     public List<GameObject> thirdVisitItemList3 = new List<GameObject>();
 
+    [Header("Third Visit - Optional quest markers")]
+    [SerializeField] private QuestMarkerSetting thirdVisitItemList1Quest = new QuestMarkerSetting();
+    [SerializeField] private QuestMarkerSetting thirdVisitItemList2Quest = new QuestMarkerSetting();
+    [SerializeField] private QuestMarkerSetting thirdVisitItemList3Quest = new QuestMarkerSetting();
+
     [Header("Third Visit - Scene transition")]
     [SerializeField] private string thirdVisitNextScene;
 
@@ -150,6 +166,11 @@ public class SceneManager : MonoBehaviour
     public List<GameObject> fourthVisitItemList1 = new List<GameObject>();
     public List<GameObject> fourthVisitItemList2 = new List<GameObject>();
     public List<GameObject> fourthVisitItemList3 = new List<GameObject>();
+
+    [Header("Fourth Visit - Optional quest markers")]
+    [SerializeField] private QuestMarkerSetting fourthVisitItemList1Quest = new QuestMarkerSetting();
+    [SerializeField] private QuestMarkerSetting fourthVisitItemList2Quest = new QuestMarkerSetting();
+    [SerializeField] private QuestMarkerSetting fourthVisitItemList3Quest = new QuestMarkerSetting();
 
     [Header("Fourth Visit - Scene transition")]
     [SerializeField] private string fourthVisitNextScene;
@@ -229,6 +250,7 @@ public class SceneManager : MonoBehaviour
 
     private void Start()
     {
+        HideAllQuestMarkers();
         PrepareItemLists();
 
         Scene currentScene = UnitySceneManager.GetActiveScene();
@@ -304,7 +326,8 @@ public class SceneManager : MonoBehaviour
                     new[] { firstVisitNarration1RevealObjects, firstVisitNarration2RevealObjects, firstVisitNarration3RevealObjects },
                     new[] { firstVisitNarration1HideObjects, firstVisitNarration2HideObjects, firstVisitNarration3HideObjects },
                     new[] { firstVisitItemList1RevealObjects, firstVisitItemList2RevealObjects, firstVisitItemList3RevealObjects },
-                    new[] { firstVisitItemList1HideObjects, firstVisitItemList2HideObjects, firstVisitItemList3HideObjects });
+                    new[] { firstVisitItemList1HideObjects, firstVisitItemList2HideObjects, firstVisitItemList3HideObjects },
+                    new[] { firstVisitItemList1Quest, firstVisitItemList2Quest, firstVisitItemList3Quest });
             case 2:
                 return new VisitConfiguration(
                     new[] { secondVisitNarratorAudio1, secondVisitNarratorAudio2, secondVisitNarratorAudio3 },
@@ -314,7 +337,8 @@ public class SceneManager : MonoBehaviour
                     new[] { secondVisitNarration1RevealObjects, secondVisitNarration2RevealObjects, secondVisitNarration3RevealObjects },
                     new[] { secondVisitNarration1HideObjects, secondVisitNarration2HideObjects, secondVisitNarration3HideObjects },
                     new[] { secondVisitItemList1RevealObjects, secondVisitItemList2RevealObjects, secondVisitItemList3RevealObjects },
-                    new[] { secondVisitItemList1HideObjects, secondVisitItemList2HideObjects, secondVisitItemList3HideObjects });
+                    new[] { secondVisitItemList1HideObjects, secondVisitItemList2HideObjects, secondVisitItemList3HideObjects },
+                    new[] { secondVisitItemList1Quest, secondVisitItemList2Quest, secondVisitItemList3Quest });
             case 3:
                 return new VisitConfiguration(
                     new[] { thirdVisitNarratorAudio1, thirdVisitNarratorAudio2, thirdVisitNarratorAudio3 },
@@ -324,7 +348,8 @@ public class SceneManager : MonoBehaviour
                     new[] { thirdVisitNarration1RevealObjects, thirdVisitNarration2RevealObjects, thirdVisitNarration3RevealObjects },
                     new[] { thirdVisitNarration1HideObjects, thirdVisitNarration2HideObjects, thirdVisitNarration3HideObjects },
                     new[] { thirdVisitItemList1RevealObjects, thirdVisitItemList2RevealObjects, thirdVisitItemList3RevealObjects },
-                    new[] { thirdVisitItemList1HideObjects, thirdVisitItemList2HideObjects, thirdVisitItemList3HideObjects });
+                    new[] { thirdVisitItemList1HideObjects, thirdVisitItemList2HideObjects, thirdVisitItemList3HideObjects },
+                    new[] { thirdVisitItemList1Quest, thirdVisitItemList2Quest, thirdVisitItemList3Quest });
             case 4:
                 return new VisitConfiguration(
                     new[] { fourthVisitNarratorAudio1, fourthVisitNarratorAudio2, fourthVisitNarratorAudio3 },
@@ -334,7 +359,8 @@ public class SceneManager : MonoBehaviour
                     new[] { fourthVisitNarration1RevealObjects, fourthVisitNarration2RevealObjects, fourthVisitNarration3RevealObjects },
                     new[] { fourthVisitNarration1HideObjects, fourthVisitNarration2HideObjects, fourthVisitNarration3HideObjects },
                     new[] { fourthVisitItemList1RevealObjects, fourthVisitItemList2RevealObjects, fourthVisitItemList3RevealObjects },
-                    new[] { fourthVisitItemList1HideObjects, fourthVisitItemList2HideObjects, fourthVisitItemList3HideObjects });
+                    new[] { fourthVisitItemList1HideObjects, fourthVisitItemList2HideObjects, fourthVisitItemList3HideObjects },
+                    new[] { fourthVisitItemList1Quest, fourthVisitItemList2Quest, fourthVisitItemList3Quest });
             default:
                 return new VisitConfiguration(
                     new[] { fourthVisitNarratorAudio1, fourthVisitNarratorAudio2, fourthVisitNarratorAudio3 },
@@ -344,7 +370,20 @@ public class SceneManager : MonoBehaviour
                     new[] { fourthVisitNarration1RevealObjects, fourthVisitNarration2RevealObjects, fourthVisitNarration3RevealObjects },
                     new[] { fourthVisitNarration1HideObjects, fourthVisitNarration2HideObjects, fourthVisitNarration3HideObjects },
                     new[] { fourthVisitItemList1RevealObjects, fourthVisitItemList2RevealObjects, fourthVisitItemList3RevealObjects },
-                    new[] { fourthVisitItemList1HideObjects, fourthVisitItemList2HideObjects, fourthVisitItemList3HideObjects });
+                    new[] { fourthVisitItemList1HideObjects, fourthVisitItemList2HideObjects, fourthVisitItemList3HideObjects },
+                    new[] { fourthVisitItemList1Quest, fourthVisitItemList2Quest, fourthVisitItemList3Quest });
+        }
+    }
+
+    private void HideAllQuestMarkers()
+    {
+        for (int visit = 1; visit <= MaximumVisits; visit++)
+        {
+            foreach (QuestMarkerSetting setting in GetVisitConfiguration(visit).QuestMarkers)
+            {
+                if (setting != null && setting.markerObject != null)
+                    setting.markerObject.SetActive(false);
+            }
         }
     }
 
@@ -445,9 +484,17 @@ public class SceneManager : MonoBehaviour
         for (int step = 0; step < configuration.NarratorClips.Length; step++)
         {
             AudioClip narratorClip = configuration.NarratorClips[step];
+            QuestMarkerSetting questSetting = configuration.QuestMarkers[step];
+            GameObject questMarker = questSetting != null ? questSetting.markerObject : null;
+            if (questMarker != null)
+                questMarker.SetActive(false);
 
+            float narrationCompletedAt = Time.unscaledTime;
             if (narratorClip != null)
+            {
                 yield return PlayNarratorAndWait(narratorClip, configuration.SpeakerSigns[step]);
+                narrationCompletedAt = Time.unscaledTime;
+            }
 
             RevealObjects(configuration.ObjectsToReveal[step]);
             HideObjects(configuration.ObjectsToHide[step]);
@@ -457,6 +504,32 @@ public class SceneManager : MonoBehaviour
                 List<Interactive> stepItems = GetStepItems(configuration.ItemLists[step]);
                 if (stepItems.Count > 0)
                 {
+                    Interactive questTarget = null;
+                    bool canShowQuestMarker = false;
+                    if (questMarker != null)
+                    {
+                        if (questSetting.targetObject == null)
+                        {
+                            Debug.LogWarning($"SceneManager: Quest marker for item list {step + 1} has no target object.", this);
+                        }
+                        else
+                        {
+                            questTarget = questSetting.targetObject.GetComponent<Interactive>();
+                            if (questTarget == null)
+                            {
+                                Debug.LogWarning($"SceneManager: Quest target '{questSetting.targetObject.name}' has no Interactive component.", questSetting.targetObject);
+                            }
+                            else if (!stepItems.Contains(questTarget))
+                            {
+                                Debug.LogWarning($"SceneManager: Quest target '{questSetting.targetObject.name}' is not in item list {step + 1}.", questSetting.targetObject);
+                            }
+                            else
+                            {
+                                canShowQuestMarker = true;
+                            }
+                        }
+                    }
+
                     currentStepItems.Clear();
                     interactedItems.Clear();
 
@@ -468,7 +541,17 @@ public class SceneManager : MonoBehaviour
 
                     int requiredInteractions = Mathf.Min(stepItems.Count, MaximumItemsPerStep);
                     while (interactedItems.Count < requiredInteractions)
+                    {
+                        if (canShowQuestMarker)
+                        {
+                            if (interactedItems.Contains(questTarget))
+                                questMarker.SetActive(false);
+                            else if (Time.unscaledTime - narrationCompletedAt >= QuestMarkerDelaySeconds)
+                                questMarker.SetActive(true);
+                        }
+
                         yield return null;
+                    }
 
                     foreach (Interactive item in stepItems)
                         item.SetInteractable(false);
@@ -477,6 +560,9 @@ public class SceneManager : MonoBehaviour
                     interactedItems.Clear();
                 }
             }
+
+            if (questMarker != null)
+                questMarker.SetActive(false);
 
             RevealObjects(configuration.ObjectsToRevealAfterItemLists[step]);
             HideObjects(configuration.ObjectsToHideAfterItemLists[step]);
@@ -594,6 +680,7 @@ public class SceneManager : MonoBehaviour
         public readonly List<GameObject>[] ObjectsToHide;
         public readonly List<GameObject>[] ObjectsToRevealAfterItemLists;
         public readonly List<GameObject>[] ObjectsToHideAfterItemLists;
+        public readonly QuestMarkerSetting[] QuestMarkers;
 
         public VisitConfiguration(
             AudioClip[] narratorClips,
@@ -603,7 +690,8 @@ public class SceneManager : MonoBehaviour
             List<GameObject>[] objectsToReveal,
             List<GameObject>[] objectsToHide,
             List<GameObject>[] objectsToRevealAfterItemLists,
-            List<GameObject>[] objectsToHideAfterItemLists)
+            List<GameObject>[] objectsToHideAfterItemLists,
+            QuestMarkerSetting[] questMarkers)
         {
             NarratorClips = narratorClips;
             SpeakerSigns = speakerSigns;
@@ -613,6 +701,17 @@ public class SceneManager : MonoBehaviour
             ObjectsToHide = objectsToHide;
             ObjectsToRevealAfterItemLists = objectsToRevealAfterItemLists;
             ObjectsToHideAfterItemLists = objectsToHideAfterItemLists;
+            QuestMarkers = questMarkers;
         }
+    }
+
+    [System.Serializable]
+    private sealed class QuestMarkerSetting
+    {
+        [Tooltip("Interactive object in this step's item list that the marker points to.")]
+        public GameObject targetObject = null;
+
+        [Tooltip("Marker shown after 10 seconds if the target has not been interacted with.")]
+        public GameObject markerObject = null;
     }
 }
