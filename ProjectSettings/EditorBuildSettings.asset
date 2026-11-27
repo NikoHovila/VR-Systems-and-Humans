@@ -12,34 +12,34 @@ EditorBuildSettings:
     path: Packages/com.vrsystems.cardboard-calibration/Runtime/Ruler/Ruler_Scene_ydpi.unity
     guid: 30d963e1496906d4ca8e63ee73bd4b2e
   - enabled: 1
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/CastleCourtyard.unity
+    path: Assets/GameScenes/CastleCourtyard.unity
     guid: b5981dbbaa346bc4ca95ff76c557374a
   - enabled: 1
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/MagicMirrorScene.unity
+    path: Assets/GameScenes/MagicMirrorScene.unity
     guid: 3641ed22c251f664b833953b19462ed4
   - enabled: 1
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/FlowerForest.unity
+    path: Assets/GameScenes/FlowerForest.unity
     guid: 1b65d782209bff344b0c88a75ea4ea69
   - enabled: 1
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/ScaryForest.unity
+    path: Assets/GameScenes/ScaryForest.unity
     guid: 4cf7b81301231894f8eca417bd675435
   - enabled: 1
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/CottageOutside.unity
+    path: Assets/GameScenes/CottageOutside.unity
     guid: 357786bb65cbfc34ab4cbe7df8e2452c
   - enabled: 1
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/CottageFirstFloor.unity
+    path: Assets/GameScenes/CottageFirstFloor.unity
     guid: 7543ee181c0014446a3dec31e3d3f885
   - enabled: 1
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/CottageSecondFloor.unity
+    path: Assets/GameScenes/CottageSecondFloor.unity
     guid: 3db5fab7c712b5b449312f82800bf1bc
   - enabled: 1
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/Mine.unity
+    path: Assets/GameScenes/Mine.unity
     guid: 957cf7bab22642b43bebd4810e3d00dc
   - enabled: 1
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/UnderneathTheCastle.unity
+    path: Assets/GameScenes/UnderneathTheCastle.unity
     guid: 06297c280b23d584499b8770f210757e
   - enabled: 0
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/CastleCourtyard_FlatTextuteTest.unity
+    path: Assets/GameScenes/CastleCourtyard_FlatTextuteTest.unity
     guid: c2351abc626dc0e49b2863a5b3b594cf
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
