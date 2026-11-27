@@ -320,6 +320,9 @@ MonoBehaviour:
   narratorAudio1: {fileID: 8300000, guid: 46158528e7349c842aa026145b8eb0bb, type: 3}
   narratorAudio2: {fileID: 8300000, guid: c35738351c693554f9494337deabef0d, type: 3}
   narratorAudio3: {fileID: 0}
+  narratorSpeaker1: {fileID: 0}
+  narratorSpeaker2: {fileID: 0}
+  narratorSpeaker3: {fileID: 0}
   itemList1:
   - {fileID: 842234808}
   itemList2: []
@@ -340,6 +343,9 @@ MonoBehaviour:
   secondVisitNarratorAudio1: {fileID: 0}
   secondVisitNarratorAudio2: {fileID: 0}
   secondVisitNarratorAudio3: {fileID: 0}
+  secondVisitNarratorSpeaker1: {fileID: 0}
+  secondVisitNarratorSpeaker2: {fileID: 0}
+  secondVisitNarratorSpeaker3: {fileID: 0}
   secondVisitItemList1: []
   secondVisitItemList2: []
   secondVisitItemList3: []
@@ -359,6 +365,9 @@ MonoBehaviour:
   thirdVisitNarratorAudio1: {fileID: 0}
   thirdVisitNarratorAudio2: {fileID: 0}
   thirdVisitNarratorAudio3: {fileID: 0}
+  thirdVisitNarratorSpeaker1: {fileID: 0}
+  thirdVisitNarratorSpeaker2: {fileID: 0}
+  thirdVisitNarratorSpeaker3: {fileID: 0}
   thirdVisitItemList1: []
   thirdVisitItemList2: []
   thirdVisitItemList3: []
@@ -378,6 +387,9 @@ MonoBehaviour:
   fourthVisitNarratorAudio1: {fileID: 0}
   fourthVisitNarratorAudio2: {fileID: 0}
   fourthVisitNarratorAudio3: {fileID: 0}
+  fourthVisitNarratorSpeaker1: {fileID: 0}
+  fourthVisitNarratorSpeaker2: {fileID: 0}
+  fourthVisitNarratorSpeaker3: {fileID: 0}
   fourthVisitItemList1: []
   fourthVisitItemList2: []
   fourthVisitItemList3: []
