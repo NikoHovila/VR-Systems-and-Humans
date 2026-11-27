@@ -2,15 +2,10 @@ using UnityEngine;
 
 /// <summary>
 /// Adds a small, voice-driven motion to a character sign while its voice line plays.
-/// Assign a specific AudioSource when possible. If none is assigned, this follows
-/// the AudioSource on the scene's SceneManager (used by the current narrator).
+/// The scene's SceneManager calls BeginSpeaking for the sign assigned to each line.
 /// </summary>
 public class VoiceReactiveSign : MonoBehaviour
 {
-    [Header("Audio")]
-    [Tooltip("AudioSource that plays this character's voice. If empty, uses the scene narrator AudioSource.")]
-    [SerializeField] private AudioSource voiceSource;
-
     [Header("Sign")]
     [Tooltip("Optional child transform to animate. Leave empty to animate this object.")]
     [SerializeField] private Transform signVisual;
@@ -35,7 +30,8 @@ public class VoiceReactiveSign : MonoBehaviour
     private float loudness;
     private float brightness;
     private float speechStartKick;
-    private bool wasPlaying;
+    private AudioSource voiceSource;
+    private bool isSpeaking;
 
     private void Awake()
     {
@@ -46,21 +42,25 @@ public class VoiceReactiveSign : MonoBehaviour
         initialLocalRotation = signVisual.localRotation;
     }
 
+    /// <summary>Called by SceneManager when this sign is the speaker for a voice line.</summary>
+    public void BeginSpeaking(AudioSource source)
+    {
+        voiceSource = source;
+        isSpeaking = voiceSource != null;
+        speechStartKick = 0.2f;
+    }
+
+    /// <summary>Called by SceneManager when this sign's voice line ends.</summary>
+    public void EndSpeaking()
+    {
+        isSpeaking = false;
+        voiceSource = null;
+    }
+
     private void Update()
     {
-        if (voiceSource == null)
+        if (isSpeaking && voiceSource != null && voiceSource.isPlaying)
         {
-            SceneManager sceneManager = FindFirstObjectByType<SceneManager>();
-            if (sceneManager != null)
-                voiceSource = sceneManager.GetComponent<AudioSource>();
-        }
-
-        bool isPlaying = voiceSource != null && voiceSource.isPlaying;
-        if (isPlaying)
-        {
-            if (!wasPlaying)
-                speechStartKick = 0.2f;
-
             SampleVoice();
         }
         else
@@ -69,7 +69,6 @@ public class VoiceReactiveSign : MonoBehaviour
             brightness = Mathf.MoveTowards(brightness, 0f, returnSpeed * Time.deltaTime);
         }
 
-        wasPlaying = isPlaying;
         AnimateSign();
     }
 

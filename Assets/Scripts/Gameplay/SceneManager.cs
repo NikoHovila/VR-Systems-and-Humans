@@ -27,6 +27,11 @@ public class SceneManager : MonoBehaviour
     public AudioClip narratorAudio2;
     public AudioClip narratorAudio3;
 
+    [Header("First Visit - Speaker signs (leave empty for off-screen narrator)")]
+    public VoiceReactiveSign narratorSpeaker1;
+    public VoiceReactiveSign narratorSpeaker2;
+    public VoiceReactiveSign narratorSpeaker3;
+
     [Header("First Visit - Item lists")]
     public List<GameObject> itemList1 = new List<GameObject>();
     public List<GameObject> itemList2 = new List<GameObject>();
@@ -59,6 +64,11 @@ public class SceneManager : MonoBehaviour
     public AudioClip secondVisitNarratorAudio1;
     public AudioClip secondVisitNarratorAudio2;
     public AudioClip secondVisitNarratorAudio3;
+
+    [Header("Second Visit - Speaker signs (leave empty for off-screen narrator)")]
+    public VoiceReactiveSign secondVisitNarratorSpeaker1;
+    public VoiceReactiveSign secondVisitNarratorSpeaker2;
+    public VoiceReactiveSign secondVisitNarratorSpeaker3;
 
     [Header("Second Visit - Item lists")]
     public List<GameObject> secondVisitItemList1 = new List<GameObject>();
@@ -93,6 +103,11 @@ public class SceneManager : MonoBehaviour
     public AudioClip thirdVisitNarratorAudio2;
     public AudioClip thirdVisitNarratorAudio3;
 
+    [Header("Third Visit - Speaker signs (leave empty for off-screen narrator)")]
+    public VoiceReactiveSign thirdVisitNarratorSpeaker1;
+    public VoiceReactiveSign thirdVisitNarratorSpeaker2;
+    public VoiceReactiveSign thirdVisitNarratorSpeaker3;
+
     [Header("Third Visit - Item lists")]
     public List<GameObject> thirdVisitItemList1 = new List<GameObject>();
     public List<GameObject> thirdVisitItemList2 = new List<GameObject>();
@@ -126,6 +141,11 @@ public class SceneManager : MonoBehaviour
     public AudioClip fourthVisitNarratorAudio2;
     public AudioClip fourthVisitNarratorAudio3;
 
+    [Header("Fourth Visit - Speaker signs (leave empty for off-screen narrator)")]
+    public VoiceReactiveSign fourthVisitNarratorSpeaker1;
+    public VoiceReactiveSign fourthVisitNarratorSpeaker2;
+    public VoiceReactiveSign fourthVisitNarratorSpeaker3;
+
     [Header("Fourth Visit - Item lists")]
     public List<GameObject> fourthVisitItemList1 = new List<GameObject>();
     public List<GameObject> fourthVisitItemList2 = new List<GameObject>();
@@ -158,6 +178,7 @@ public class SceneManager : MonoBehaviour
     private readonly HashSet<Interactive> currentStepItems = new HashSet<Interactive>();
     private readonly HashSet<Interactive> interactedItems = new HashSet<Interactive>();
     private AudioSource narrationSource;
+    private VoiceReactiveSign activeSpeakerSign;
 
     public int CurrentVisitNumber { get; private set; }
 
@@ -219,6 +240,9 @@ public class SceneManager : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (activeSpeakerSign != null)
+            activeSpeakerSign.EndSpeaking();
+
         foreach (Interactive item in trackedItems)
         {
             if (item != null)
@@ -274,6 +298,7 @@ public class SceneManager : MonoBehaviour
             case 1:
                 return new VisitConfiguration(
                     new[] { narratorAudio1, narratorAudio2, narratorAudio3 },
+                    new[] { narratorSpeaker1, narratorSpeaker2, narratorSpeaker3 },
                     new[] { itemList1, itemList2, itemList3 },
                     nextScene,
                     new[] { firstVisitNarration1RevealObjects, firstVisitNarration2RevealObjects, firstVisitNarration3RevealObjects },
@@ -283,6 +308,7 @@ public class SceneManager : MonoBehaviour
             case 2:
                 return new VisitConfiguration(
                     new[] { secondVisitNarratorAudio1, secondVisitNarratorAudio2, secondVisitNarratorAudio3 },
+                    new[] { secondVisitNarratorSpeaker1, secondVisitNarratorSpeaker2, secondVisitNarratorSpeaker3 },
                     new[] { secondVisitItemList1, secondVisitItemList2, secondVisitItemList3 },
                     secondVisitNextScene,
                     new[] { secondVisitNarration1RevealObjects, secondVisitNarration2RevealObjects, secondVisitNarration3RevealObjects },
@@ -292,6 +318,7 @@ public class SceneManager : MonoBehaviour
             case 3:
                 return new VisitConfiguration(
                     new[] { thirdVisitNarratorAudio1, thirdVisitNarratorAudio2, thirdVisitNarratorAudio3 },
+                    new[] { thirdVisitNarratorSpeaker1, thirdVisitNarratorSpeaker2, thirdVisitNarratorSpeaker3 },
                     new[] { thirdVisitItemList1, thirdVisitItemList2, thirdVisitItemList3 },
                     thirdVisitNextScene,
                     new[] { thirdVisitNarration1RevealObjects, thirdVisitNarration2RevealObjects, thirdVisitNarration3RevealObjects },
@@ -301,6 +328,7 @@ public class SceneManager : MonoBehaviour
             case 4:
                 return new VisitConfiguration(
                     new[] { fourthVisitNarratorAudio1, fourthVisitNarratorAudio2, fourthVisitNarratorAudio3 },
+                    new[] { fourthVisitNarratorSpeaker1, fourthVisitNarratorSpeaker2, fourthVisitNarratorSpeaker3 },
                     new[] { fourthVisitItemList1, fourthVisitItemList2, fourthVisitItemList3 },
                     fourthVisitNextScene,
                     new[] { fourthVisitNarration1RevealObjects, fourthVisitNarration2RevealObjects, fourthVisitNarration3RevealObjects },
@@ -310,6 +338,7 @@ public class SceneManager : MonoBehaviour
             default:
                 return new VisitConfiguration(
                     new[] { fourthVisitNarratorAudio1, fourthVisitNarratorAudio2, fourthVisitNarratorAudio3 },
+                    new[] { fourthVisitNarratorSpeaker1, fourthVisitNarratorSpeaker2, fourthVisitNarratorSpeaker3 },
                     new[] { fourthVisitItemList1, fourthVisitItemList2, fourthVisitItemList3 },
                     fourthVisitNextScene,
                     new[] { fourthVisitNarration1RevealObjects, fourthVisitNarration2RevealObjects, fourthVisitNarration3RevealObjects },
@@ -418,7 +447,7 @@ public class SceneManager : MonoBehaviour
             AudioClip narratorClip = configuration.NarratorClips[step];
 
             if (narratorClip != null)
-                yield return PlayNarratorAndWait(narratorClip);
+                yield return PlayNarratorAndWait(narratorClip, configuration.SpeakerSigns[step]);
 
             RevealObjects(configuration.ObjectsToReveal[step]);
             HideObjects(configuration.ObjectsToHide[step]);
@@ -480,7 +509,7 @@ public class SceneManager : MonoBehaviour
         }
     }
 
-    private IEnumerator PlayNarratorAndWait(AudioClip narratorClip)
+    private IEnumerator PlayNarratorAndWait(AudioClip narratorClip, VoiceReactiveSign speakerSign)
     {
         narrationSource.Stop();
         narrationSource.clip = narratorClip;
@@ -493,11 +522,22 @@ public class SceneManager : MonoBehaviour
 
         narrationSource.PlayScheduled(playbackStartTime);
 
+        while (AudioSettings.dspTime < playbackStartTime)
+            yield return null;
+
+        activeSpeakerSign = speakerSign;
+        if (activeSpeakerSign != null)
+            activeSpeakerSign.BeginSpeaking(narrationSource);
+
         while (AudioSettings.dspTime < playbackEndTime)
             yield return null;
 
         while (narrationSource.isPlaying)
             yield return null;
+
+        if (activeSpeakerSign != null)
+            activeSpeakerSign.EndSpeaking();
+        activeSpeakerSign = null;
     }
 
     private List<Interactive> GetStepItems(List<GameObject> objects)
@@ -547,6 +587,7 @@ public class SceneManager : MonoBehaviour
     private sealed class VisitConfiguration
     {
         public readonly AudioClip[] NarratorClips;
+        public readonly VoiceReactiveSign[] SpeakerSigns;
         public readonly List<GameObject>[] ItemLists;
         public readonly string NextScene;
         public readonly List<GameObject>[] ObjectsToReveal;
@@ -556,6 +597,7 @@ public class SceneManager : MonoBehaviour
 
         public VisitConfiguration(
             AudioClip[] narratorClips,
+            VoiceReactiveSign[] speakerSigns,
             List<GameObject>[] itemLists,
             string nextScene,
             List<GameObject>[] objectsToReveal,
@@ -564,6 +606,7 @@ public class SceneManager : MonoBehaviour
             List<GameObject>[] objectsToHideAfterItemLists)
         {
             NarratorClips = narratorClips;
+            SpeakerSigns = speakerSigns;
             ItemLists = itemLists;
             NextScene = nextScene;
             ObjectsToReveal = objectsToReveal;

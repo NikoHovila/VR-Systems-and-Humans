@@ -8,7 +8,6 @@ public class Throwable : Interactive
     [Header("Pito-asetukset")]
     [SerializeField] float holdDistance = 3.5f; // Pallo pysyy kauempana (kokeile 3-4)
     [SerializeField] float verticalOffset = -0.5f; // Pallo laskeutuu hieman alemmas näkökentästä
-    
     public bool useGravity = true;
     
     static Transform grabbed = null;
@@ -61,6 +60,7 @@ public class Throwable : Interactive
         {
             // Lasketaan paikka: Kamera + Suunta * Etäisyys + Pieni pudotus alaspäin
             Vector3 targetPoint = cam.position + (cam.forward * holdDistance);
+            targetPoint += cam.up * verticalOffset;
             
             rb.linearVelocity = (targetPoint - transform.position) * grabSpeed;
         }

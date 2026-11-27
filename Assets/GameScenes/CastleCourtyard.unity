@@ -414,6 +414,9 @@ MonoBehaviour:
   narratorAudio1: {fileID: 8300000, guid: 46158528e7349c842aa026145b8eb0bb, type: 3}
   narratorAudio2: {fileID: 8300000, guid: c35738351c693554f9494337deabef0d, type: 3}
   narratorAudio3: {fileID: 0}
+  narratorSpeaker1: {fileID: 0}
+  narratorSpeaker2: {fileID: 842234812}
+  narratorSpeaker3: {fileID: 0}
   itemList1:
   - {fileID: 842234808}
   itemList2: []
@@ -434,6 +437,9 @@ MonoBehaviour:
   secondVisitNarratorAudio1: {fileID: 0}
   secondVisitNarratorAudio2: {fileID: 0}
   secondVisitNarratorAudio3: {fileID: 0}
+  secondVisitNarratorSpeaker1: {fileID: 0}
+  secondVisitNarratorSpeaker2: {fileID: 0}
+  secondVisitNarratorSpeaker3: {fileID: 0}
   secondVisitItemList1: []
   secondVisitItemList2: []
   secondVisitItemList3: []
@@ -453,6 +459,9 @@ MonoBehaviour:
   thirdVisitNarratorAudio1: {fileID: 0}
   thirdVisitNarratorAudio2: {fileID: 0}
   thirdVisitNarratorAudio3: {fileID: 0}
+  thirdVisitNarratorSpeaker1: {fileID: 0}
+  thirdVisitNarratorSpeaker2: {fileID: 0}
+  thirdVisitNarratorSpeaker3: {fileID: 0}
   thirdVisitItemList1: []
   thirdVisitItemList2: []
   thirdVisitItemList3: []
@@ -472,6 +481,9 @@ MonoBehaviour:
   fourthVisitNarratorAudio1: {fileID: 0}
   fourthVisitNarratorAudio2: {fileID: 0}
   fourthVisitNarratorAudio3: {fileID: 0}
+  fourthVisitNarratorSpeaker1: {fileID: 0}
+  fourthVisitNarratorSpeaker2: {fileID: 0}
+  fourthVisitNarratorSpeaker3: {fileID: 0}
   fourthVisitItemList1: []
   fourthVisitItemList2: []
   fourthVisitItemList3: []
@@ -727,6 +739,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 842234809}
+    - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 842234812}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
 --- !u!1 &842234808 stripped
 GameObject:
@@ -771,6 +786,32 @@ CapsuleCollider:
   m_Height: 21.63
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 10.39}
+--- !u!4 &842234811 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2774220344278030320, guid: cc001749ea2ae524196ef1cbb2885ac0, type: 3}
+  m_PrefabInstance: {fileID: 842234807}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &842234812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842234808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b40b72c48a44c78f48621b34d4b985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VoiceReactiveSign
+  signVisual: {fileID: 842234811}
+  maximumBounce: 0.12
+  maximumSwayDegrees: 5
+  maximumPitchTiltDegrees: 4
+  motionSpeed: 11
+  loudnessSensitivity: 12
+  minimumLoudness: 0.025
+  pitchSensitivity: 0.35
+  returnSpeed: 8
 --- !u!1 &907292807
 GameObject:
   m_ObjectHideFlags: 0
