@@ -804,13 +804,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VoiceReactiveSign
   signVisual: {fileID: 842234811}
-  maximumBounce: 0.12
-  maximumSwayDegrees: 5
-  maximumPitchTiltDegrees: 4
+  maximumBounce: 0.35
+  maximumSwayDegrees: 12
+  maximumPitchTiltDegrees: 10
   motionSpeed: 11
-  loudnessSensitivity: 12
+  loudnessSensitivity: 18
   minimumLoudness: 0.025
-  pitchSensitivity: 0.35
+  pitchSensitivity: 0.8
   returnSpeed: 8
 --- !u!1 &907292807
 GameObject:
